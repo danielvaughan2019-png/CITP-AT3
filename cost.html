@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cost Analysis — EWB Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">EWB <span>Challenge</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Summary</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="background.html">Background</a></li>
+      <li><a href="problem.html">Problem</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="selection.html">Selection</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="prototyping.html">Prototype</a></li>
+      <li><a href="implementation.html">Implement</a></li>
+      <li><a href="cost.html">Cost</a></li>
+      <li><a href="recommendations.html">Rec.</a></li>
+      <li><a href="references.html">Refs</a></li>
+      <li><a href="appendices.html">Appendix</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="page-tag">Section 9</span>
+      <h1>Cost Analysis</h1>
+      <p class="subtitle">Materials, labour, maintenance, and financial sustainability of the design.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+
+      <div class="reveal">
+        <p>This section details the costs the community would assume to make, implement, and maintain the design — including maintenance and end-of-life disposal. Provide prices in both Australian Dollars (AUD) and local currency where possible, and indicate where price data was sourced from.</p>
+      </div>
+
+      <div class="reveal">
+        <h3 class="sub">Bill of Materials</h3>
+        <div class="table-wrap">
+          <table class="cost-t">
+            <thead>
+              <tr>
+                <th>Item / Component</th>
+                <th>Specification</th>
+                <th style="width:70px;">Qty</th>
+                <th>Unit Cost (AUD)</th>
+                <th>Total (AUD)</th>
+                <th>Total (Local)</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ph-cell">[Material / component]</td>
+                <td class="ph-cell">[Spec / grade]</td>
+                <td class="c ph-cell">[qty]</td>
+                <td class="c ph-cell">$[x]</td>
+                <td class="c ph-cell">$[total]</td>
+                <td class="c ph-cell">[local]</td>
+                <td class="ph-cell">[Supplier / source]</td>
+              </tr>
+              <tr>
+                <td class="ph-cell">[Material / component]</td>
+                <td class="ph-cell">[Spec / grade]</td>
+                <td class="c ph-cell">[qty]</td>
+                <td class="c ph-cell">$[x]</td>
+                <td class="c ph-cell">$[total]</td>
+                <td class="c ph-cell">[local]</td>
+                <td class="ph-cell">[Supplier / source]</td>
+              </tr>
+              <tr>
+                <td class="ph-cell">[Material / component]</td>
+                <td class="ph-cell">[Spec / grade]</td>
+                <td class="c ph-cell">[qty]</td>
+                <td class="c ph-cell">$[x]</td>
+                <td class="c ph-cell">$[total]</td>
+                <td class="c ph-cell">[local]</td>
+                <td class="ph-cell">[Supplier / source]</td>
+              </tr>
+              <tr>
+                <td>Labour</td>
+                <td class="ph-cell">[Description of work]</td>
+                <td class="c ph-cell">—</td>
+                <td class="c ph-cell">—</td>
+                <td class="c ph-cell">$[total]</td>
+                <td class="c ph-cell">[local]</td>
+                <td class="ph-cell">[Source / estimate basis]</td>
+              </tr>
+              <tr>
+                <td>Annual Maintenance</td>
+                <td class="ph-cell">[Description]</td>
+                <td class="c ph-cell">—</td>
+                <td class="c ph-cell">—</td>
+                <td class="c ph-cell">$[total/yr]</td>
+                <td class="c ph-cell">[local/yr]</td>
+                <td class="ph-cell">[Estimate basis]</td>
+              </tr>
+              <tr>
+                <td>End-of-life Disposal</td>
+                <td class="ph-cell">[Description]</td>
+                <td class="c ph-cell">—</td>
+                <td class="c ph-cell">—</td>
+                <td class="c ph-cell">$[total]</td>
+                <td class="c ph-cell">[local]</td>
+                <td class="ph-cell">[Estimate basis]</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4"><strong>Estimated Total</strong></td>
+                <td class="c"><strong>$[total] AUD</strong></td>
+                <td class="c"><strong>[local total]</strong></td>
+                <td></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Table 3: Bill of materials and cost estimate. Prices sourced from [describe sources, e.g. local suppliers, online catalogues, expert estimates]. Exchange rate used: 1 AUD = [X local currency] as of [date].</p>
+      </div>
+
+      <div class="reveal">
+        <h3 class="sub">Cost Narrative</h3>
+        <p class="ph">Provide a brief narrative explanation of the cost breakdown. Are the major cost drivers as expected? How does the total compare to community budgets or similar projects? Are there opportunities to reduce cost through local sourcing, donated materials, or phased implementation? [Approx. 1 paragraph.]</p>
+      </div>
+
+      <div class="reveal">
+        <h3 class="sub">Funding &amp; Financial Sustainability</h3>
+        <p class="ph">If your group has identified ways to assist the partner in covering project costs, detail these here. Are there relevant grants that could be applied for? Does the project generate income for the community? If so, what are the income projections, and is the project financially sustainable over the long term? [Approx. 1 paragraph.]</p>
+      </div>
+
+      <div class="page-nav reveal">
+        <a href="implementation.html">← Implementation Plan</a>
+        <a href="recommendations.html" class="next">Recommendations →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>[Your Website Title]</strong> &nbsp;·&nbsp; EWB Challenge — UTS &nbsp;·&nbsp; [Group Name] &nbsp;·&nbsp; [Year]</p>
+    <p style="margin-top:6px;opacity:.5;font-size:.74rem;">Academic submission · Written in third person · APA referencing</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

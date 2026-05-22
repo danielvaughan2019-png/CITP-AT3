@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Selection — EWB Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">EWB <span>Challenge</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Summary</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="background.html">Background</a></li>
+      <li><a href="problem.html">Problem</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="selection.html">Selection</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="prototyping.html">Prototype</a></li>
+      <li><a href="implementation.html">Implement</a></li>
+      <li><a href="cost.html">Cost</a></li>
+      <li><a href="recommendations.html">Rec.</a></li>
+      <li><a href="references.html">Refs</a></li>
+      <li><a href="appendices.html">Appendix</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="page-tag">Section 5</span>
+      <h1>Design Selection</h1>
+      <p class="subtitle">Justifying one solution using a decision matrix and design criteria.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+
+      <div class="reveal">
+        <div class="badge-row">
+          <span class="badge badge-green">Screening Stage</span>
+          <span class="badge badge-clay">Decision Matrix Required</span>
+        </div>
+        <p>This section relates to the <em>screening</em> sub-stage of ideation. One solution is selected from the three design options using a decision matrix that applies the design criteria defined in Section 3.1.</p>
+      </div>
+
+      <div class="reveal">
+        <h3 class="sub">Decision Matrix</h3>
+        <p>Explain the rating scale chosen and the weighting applied to each criterion. For example: <em>1 = Poor, 2 = Fair, 3 = Good, 4 = Very Good, 5 = Excellent.</em> The weighted total score = sum of (criterion score × weight).</p>
+
+        <div class="table-wrap">
+          <table class="matrix">
+            <thead>
+              <tr>
+                <th>Criterion</th>
+                <th style="width:80px;">Weight</th>
+                <th>Option 1<br/><small>[Name]</small></th>
+                <th>Option 2<br/><small>[Name]</small></th>
+                <th>Option 3 ✓<br/><small>[Name]</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>[Criterion 1 name]</td>
+                <td class="c ph-cell">[x%]</td>
+                <td class="c ph-cell">[score]</td>
+                <td class="c ph-cell">[score]</td>
+                <td class="c winner ph-cell">[score]</td>
+              </tr>
+              <tr>
+                <td>[Criterion 2 name]</td>
+                <td class="c ph-cell">[x%]</td>
+                <td class="c ph-cell">[score]</td>
+                <td class="c ph-cell">[score]</td>
+                <td class="c winner ph-cell">[score]</td>
+              </tr>
+              <tr>
+                <td>[Criterion 3 name]</td>
+                <td class="c ph-cell">[x%]</td>
+                <td class="c ph-cell">[score]</td>
+                <td class="c ph-cell">[score]</td>
+                <td class="c winner ph-cell">[score]</td>
+              </tr>
+              <tr>
+                <td>[Criterion 4 name]</td>
+                <td class="c ph-cell">[x%]</td>
+                <td class="c ph-cell">[score]</td>
+                <td class="c ph-cell">[score]</td>
+                <td class="c winner ph-cell">[score]</td>
+              </tr>
+              <tr>
+                <td>[Criterion 5 name]</td>
+                <td class="c ph-cell">[x%]</td>
+                <td class="c ph-cell">[score]</td>
+                <td class="c ph-cell">[score]</td>
+                <td class="c winner ph-cell">[score]</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2"><strong>Weighted Total</strong></td>
+                <td class="c ph-cell">[total]</td>
+                <td class="c ph-cell">[total]</td>
+                <td class="c winner"><strong>[total]</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Table 1: Decision matrix comparing three design options against weighted criteria. ✓ = selected design.</p>
+      </div>
+
+      <div class="reveal">
+        <h3 class="sub">Justification of Selection</h3>
+        <p class="ph">Explain the rationale behind your decision matrix. Justify the rating scale you chose and why the weights are distributed as shown — which criteria are most important to the community, and why?</p>
+        <p class="ph">Discuss the scores given to each option for each criterion. Why did Option [X] score higher on [Criterion Y] than the others? Provide specific reasoning linked to each design's characteristics and the community context.</p>
+        <p class="ph">Conclude with a clear statement of the selected design and why it is the most appropriate solution to carry forward for detailed development. By the end of this section it must be clear which design your group intends to develop for the rest of the semester.</p>
+      </div>
+
+      <div class="page-nav reveal">
+        <a href="solutions.html">← Design Solutions</a>
+        <a href="design.html" class="next">Detailed Design →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>[Your Website Title]</strong> &nbsp;·&nbsp; EWB Challenge — UTS &nbsp;·&nbsp; [Group Name] &nbsp;·&nbsp; [Year]</p>
+    <p style="margin-top:6px;opacity:.5;font-size:.74rem;">Academic submission · Written in third person · APA referencing</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
