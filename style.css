@@ -231,8 +231,48 @@ tbody td:first-child { font-weight: 500; color: var(--bark); }
 .matrix .winner { background: rgba(106,171,126,.15); }
 .matrix tfoot td { font-weight: 700; color: var(--bark); background: var(--sand); padding: 12px 16px; border-top: 2px solid var(--fog); }
 
-/* Cost */
+/* Cost table */
 .cost-t tfoot td { font-weight: 700; color: var(--moss); background: rgba(61,107,79,.07); border-top: 2px solid var(--moss); padding: 12px 16px; }
+
+/* Cost table — category divider rows
+   These are the group header rows inside <tbody> (Generation, Charge Control, etc.)
+   The inline style on each sets the moss colour; this rule handles the
+   alternating-row override so they always stand out clearly. */
+.cost-t tbody tr.cost-cat td,
+.cost-t tbody tr[data-cat] td {
+  background: rgba(61,107,79,.07);
+  font-size: .73rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--moss);
+  padding: 7px 12px;
+}
+
+/* Suppress the default first-child bold/dark override inside cost category rows
+   so the moss colour from above wins cleanly. */
+.cost-t tbody tr.cost-cat td:first-child,
+.cost-t tbody tr[data-cat] td:first-child {
+  font-weight: 600;
+  color: var(--moss);
+}
+
+/* Exchange rate / meta note beneath the section intro */
+.cost-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sand);
+  border: 1px solid var(--fog);
+  border-radius: var(--r);
+  padding: 7px 14px;
+  font-size: .78rem;
+  color: var(--muted);
+  margin-top: 4px;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+.cost-meta strong { color: var(--bark); }
 
 /* ─── DESIGN CARDS ───────────────────────────────── */
 .design-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-top: 24px; }
@@ -373,8 +413,10 @@ footer {
 footer strong { color: var(--leaf); }
 
 /* ─── REVEAL ANIMATION ───────────────────────────── */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
-.reveal.visible { opacity: 1; transform: none; }
+/* Content is visible by default — JS adds animation as progressive enhancement */
+.reveal { opacity: 1; transform: none; transition: opacity .5s ease, transform .5s ease; }
+.js-reveal-ready .reveal { opacity: 0; transform: translateY(18px); }
+.js-reveal-ready .reveal.visible { opacity: 1; transform: none; }
 
 /* ─── RESPONSIVE ─────────────────────────────────── */
 @media (max-width: 680px) {
@@ -391,7 +433,6 @@ footer strong { color: var(--leaf); }
    SIDEBAR LAYOUT (content.html only)
    ══════════════════════════════════════════════════ */
 
-/* Top nav slim for content page — links go in sidebar */
 .sidebar-layout {
   display: flex;
   align-items: flex-start;
@@ -471,7 +512,6 @@ footer strong { color: var(--leaf); }
   padding: 0;
 }
 
-/* Sections inside content page */
 .report-section {
   padding: 64px 48px;
   scroll-margin-top: calc(var(--nav-h) + 16px);
