@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>References &amp; Appendices — EWB Challenge</title>
+  <title>Full Report - LumenPower EWB Challenge</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- ─── TOP NAV ───────────────────────────────── -->
   <nav id="nav">
     <a href="index.html" class="nav-logo">EWB <span>Challenge</span></a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -17,563 +18,994 @@
     </button>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Summary</a></li>
-      <li><a href="content.html">Report</a></li>
-      <li><a href="refs.html" class="active">Refs &amp; Appendix</a></li>
+      <li><a href="content.html" class="active">Report</a></li>
+      <li><a href="refs.html">Refs &amp; Appendix</a></li>
     </ul>
   </nav>
 
-  <!-- ─── PAGE HEADER ───────────────────────────── -->
-  <header class="page-header">
-    <div class="page-header-inner">
-      <span class="page-tag">Supporting Material</span>
-      <h1>References &amp; Appendices</h1>
-      <p class="subtitle">All cited sources and supporting documentation for this project.</p>
-    </div>
-  </header>
+  <!-- ─── SIDEBAR + CONTENT WRAPPER ────────────── -->
+  <div class="sidebar-layout">
 
-  <main>
-    <div class="content">
+    <!-- ── LEFT SIDEBAR ─────────────────────────── -->
+    <nav id="sidebar" aria-label="Report sections">
+
+      <span class="sidebar-label">Team</span>
+      <a href="#team">      <span class="num">-</span>Group Declaration</a>
+
+      <span class="sidebar-label">Sections</span>
+      <a href="#project">   <span class="num">1</span>Project Details</a>
+      <a href="#background"><span class="num">2</span>Background</a>
+      <a href="#problem">   <span class="num">3</span>Problem &amp; Criteria</a>
+      <a href="#solutions"> <span class="num">4</span>Design Solutions</a>
+      <a href="#selection"> <span class="num">5</span>Design Selection</a>
+      <a href="#design">    <span class="num">6</span>Detailed Design</a>
+      <a href="#prototyping"><span class="num">7</span>Prototyping</a>
+      <a href="#implementation"><span class="num">8</span>Implementation</a>
+      <a href="#cost">      <span class="num">9</span>Cost Analysis</a>
+      <a href="#other">     <span class="num">10</span>Other Considerations</a>
+      <a href="#recommendations"><span class="num">11</span>Recommendations</a>
+
+      <span class="sidebar-label">More</span>
+      <a href="refs.html">  <span class="num">→</span>Refs &amp; Appendices</a>
+    </nav>
+
+    <!-- ── MAIN CONTENT AREA ────────────────────── -->
+    <div id="content-area">
 
       <!-- ══════════════════════════════════════════
-           REFERENCES
+           TEAM / GROUP DECLARATION
       ══════════════════════════════════════════════ -->
-      <section id="references" style="scroll-margin-top: calc(var(--nav-h) + 16px);">
-        <div class="reveal">
-          <span class="section-tag">References</span>
-          <h2 class="section-title">Reference List</h2>
-          <p style="font-size:.85rem;color:var(--muted);font-style:italic;">All references formatted in APA 7th edition. Listed alphabetically by author.</p>
-        </div>
+      <section class="report-section" id="team">
+        <div class="content">
+          <div class="reveal">
+            <div class="page-header" style="margin: -64px -48px 40px; padding: 48px 48px 36px;">
+              <div>
+                <span class="page-tag">Team</span>
+                <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;line-height:1.2;margin-bottom:8px;">Group Declaration &amp; Acknowledgement</h1>
+                <p class="subtitle">Contribution records and Acknowledgement of Country.</p>
+              </div>
+            </div>
 
-        <!-- ── Conference Papers & Journal Articles ── -->
-        <div class="reveal">
-          <h3 class="sub">Conference Papers &amp; Journal Articles</h3>
-          <ol class="refs">
+            <h2 class="section-title">Team Member Contributions</h2>
+            <p>Only team members who contributed directly should be listed below. The team should be in agreement regarding contributions before submitting.</p>
 
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Rajendar, P., Rao, C. V., &amp; Srinivas, D. (2025).
-              Transforming microgrid flexibility through a dynamic and modular scalability framework for diverse energy applications.
-              <em>2025 Third International Conference on Cyber Physical Systems, Power Electronics and Electric Vehicles (ICPEEV)</em>,
-              1–6.
-              <a href="https://doi.org/10.1109/ICPEEV67897.2025.11291456">https://doi.org/10.1109/ICPEEV67897.2025.11291456</a>
-            </li>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width:35%;">Group Member Name</th>
+                    <th>Project Contributions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Nicolas Mouarkesh</td><td>Section 1 - Project Details; Section 7 - Prototyping; Section 8 - Implementation Plan; Section 9 - Cost Analysis; References; Section 10 - Other Considerations; Section 11 - Recommendations</td></tr>
+                  <tr><td>Pasquale Panucci</td><td>Section 2 - Background; References; Other Considerations; Recommendations</td></tr>
+                  <tr><td>Daniel Vaughan</td><td>Section 4 - Design Solution Options; Section 5 - Design Selection; Section 6 - Detailed Design; References</td></tr>
+                  <tr><td>Hamza Jan Sarhindi</td><td>Section 3 - Problem Description &amp; Design Criteria</td></tr>
+                  <tr><td class="ph-cell">[Full Name]</td><td class="ph-cell">[List sections contributed to, editing, team management, etc.]</td></tr>
+                  <tr><td class="ph-cell">[Full Name]</td><td class="ph-cell">[List sections contributed to, editing, team management, etc.]</td></tr>
+                </tbody>
+              </table>
+            </div>
 
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Young, M., Ward, S., &amp; Frearson, L. (2014).
-              Reliable technology and local economies: The BushLight story.
-              <em>Our Place</em>, (45), 12–19.
-              <a href="https://static1.squarespace.com/static/5450868fe4b09b217330bb42/t/546d92f6e4b0b57dc1f1f8b0/1416467190245/OP45-e.pdf">https://static1.squarespace.com/static/5450868fe4b09b217330bb42/t/546d92f6e4b0b57dc1f1f8b0/1416467190245/OP45-e.pdf</a>
-            </li>
-
-          </ol>
-        </div>
-
-        <!-- ── Websites & Online Sources ── -->
-        <div class="reveal">
-          <h3 class="sub">Websites &amp; Online Sources</h3>
-          <ol class="refs" start="3">
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Aussie Solar Tech. (2026).
-              <em>Victron inverter: Buy in 2026 &amp; save money</em>.
-              <a href="https://aussiesolartech.com.au/products/victron-inverter/">https://aussiesolartech.com.au/products/victron-inverter/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              B-cycle Australia. (2026).
-              <em>Battery recycling</em>.
-              <a href="https://bcycle.com.au">https://bcycle.com.au</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Bushlight. (2011).
-              <em>Bushlight case study 23: Port Stewart — improving livelihood choices for Indigenous people through renewable energy</em> [PDF].
-              Centre for Appropriate Technology.
-              <a href="https://icat-nnyp.squarespace.com/s/Bushlight-Case-study-23-Port-Stewart.pdf">https://icat-nnyp.squarespace.com/s/Bushlight-Case-study-23-Port-Stewart.pdf</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Cape York Weekly. (2026, April 23).
-              <em>Vulnerable remote communities 'at very end' of global fuel supply chains</em>.
-              <a href="https://capeyorkweekly.com.au/vulnerable-remote-communities-at-very-end-of-global-fuel-supply-chains/23369/">https://capeyorkweekly.com.au/vulnerable-remote-communities-at-very-end-of-global-fuel-supply-chains/23369/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Centre for Appropriate Technology. (2021).
-              <em>Community planning with the Lama Lama people</em>.
-              <a href="https://www.cfat.org.au/community-planning-with-the-lama-lama-people">https://www.cfat.org.au/community-planning-with-the-lama-lama-people</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Centre for Appropriate Technology Limited. (2008).
-              <em>Light and life in the bush: BushLight</em>.
-              BushLight.
-              <a href="https://static1.squarespace.com/static/5450868fe4b09b217330bb42/t/55a4ae70e4b07587ecc461e3/1436855920428/Bushlight+Case+study+23+-+Port+Stewart.pdf">https://static1.squarespace.com/static/5450868fe4b09b217330bb42/t/55a4ae70e4b07587ecc461e3/1436855920428/Bushlight+Case+study+23+-+Port+Stewart.pdf</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Department of Local Government, Water and Volunteers. (2025).
-              <em>2025–26 Indigenous Councils Funding Program</em>.
-              Queensland Government.
-              <a href="https://www.dlgwv.qld.gov.au/local-government/for-councils/grants/current-programs/indigenous-councils-funding-program">https://www.dlgwv.qld.gov.au/local-government/for-councils/grants/current-programs/indigenous-councils-funding-program</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Engineers Without Borders Australia. (2025, May 14).
-              <em>The power of partnerships: Unlocking access to clean water on Lama Lama Country</em>.
-              <a href="https://ewb.org.au/blog/2025/05/14/the-power-of-partnerships-unlocking-access-to-clean-water-on-lama-lama-country/">https://ewb.org.au/blog/2025/05/14/the-power-of-partnerships-unlocking-access-to-clean-water-on-lama-lama-country/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Engineers Without Borders Australia. (2026).
-              <em>About Tropical North Queensland</em>.
-              EWB Challenge.
-              <a href="https://ewbchallenge.org/challenge/port-stewart-lama-lama/about-tropical-north-queensland/">https://ewbchallenge.org/challenge/port-stewart-lama-lama/about-tropical-north-queensland/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Engineers Without Borders Australia. (2026).
-              <em>Lama Lama Country — a look at the sacred places, sea country, ranger bases, existing amenities and infrastructure</em>.
-              EWB Challenge.
-              <a href="https://ewbchallenge.org/challenge/port-stewart-lama-lama/lama-lama-country-a-look-at-the-sacred-places/">https://ewbchallenge.org/challenge/port-stewart-lama-lama/lama-lama-country-a-look-at-the-sacred-places/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              EWB Challenge. (2026).
-              <em>Port Stewart, Lama Lama: Design Area 3 — Energy</em>.
-              Engineers Without Borders Australia.
-              <a href="https://ewbchallenge.org/challenge/port-stewart-lama-lama/">https://ewbchallenge.org/challenge/port-stewart-lama-lama/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              EWB Challenge. (2026).
-              <em>Design considerations</em>.
-              Engineers Without Borders Australia.
-              <a href="https://ewbchallenge.org/challenge/port-stewart-lama-lama/design-considerations/">https://ewbchallenge.org/challenge/port-stewart-lama-lama/design-considerations/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Every Battery Australia. (2025).
-              <em>MPPT solar regulators</em>.
-              <a href="https://www.everybattery.com.au/solar/regulators-charge-controllers/mppt/">https://www.everybattery.com.au/solar/regulators-charge-controllers/mppt/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              FuelWatch Queensland. (2026).
-              <em>Remote area fuel pricing</em>.
-              Queensland Government.
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              IndexBox Australia. (2026).
-              <em>Flooded lead acid battery market in Australia</em>.
-              <a href="https://www.indexbox.io/store/australia-flooded-lead-acid-battery-market-analysis-forecast-size-trends-and-insights/">https://www.indexbox.io/store/australia-flooded-lead-acid-battery-market-analysis-forecast-size-trends-and-insights/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Lama Lama Country. (2026).
-              <em>Enterprises</em>.
-              <a href="https://www.lamalama.org.au/enterprises/">https://www.lamalama.org.au/enterprises/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              LiFePO4 Australia. (2025).
-              <em>Solar batteries and prices in Australia</em>.
-              <a href="https://lifepo4.com.au/how-much-is-a-solar-battery-in-australia/">https://lifepo4.com.au/how-much-is-a-solar-battery-in-australia/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              National Emergency Management Agency. (2024, July 5).
-              <em>New funding for Cape York disaster resilience</em>.
-              Australian Government.
-              <a href="https://nema.gov.au/about-us/media-centre/new-funding-for-cape-york-disaster-resilience-qld050724">https://nema.gov.au/about-us/media-centre/new-funding-for-cape-york-disaster-resilience-qld050724</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Renew Magazine. (2020).
-              <em>Powering Indigenous communities with renewables</em>.
-              Alternative Technology Association.
-              <a href="https://renew.org.au/renew-magazine/solar-batteries/powering-indigenous-communities-with-renewables/">https://renew.org.au/renew-magazine/solar-batteries/powering-indigenous-communities-with-renewables/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Reserve Bank of Australia. (2026).
-              <em>Exchange rates</em>.
-              <a href="https://www.rba.gov.au/statistics/frequency/exchange-rates.html">https://www.rba.gov.au/statistics/frequency/exchange-rates.html</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              SolarQuotes. (2026).
-              <em>Solar panel cost in Australia: What you should pay in 2026</em>.
-              <a href="https://www.solarquotes.com.au/panels/cost/">https://www.solarquotes.com.au/panels/cost/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              SolarScorecard. (2026).
-              <em>Solar panel cost Australia 2026: $3,000–$13,000 by size (after rebates)</em>.
-              <a href="https://solarscorecard.com.au/solar-panels-cost/">https://solarscorecard.com.au/solar-panels-cost/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              SPS Energy. (2025).
-              <em>Off grid solar system cost 2025: Australia price guide</em>.
-              <a href="https://spsenergy.com.au/off-grid-solar-system-cost/">https://spsenergy.com.au/off-grid-solar-system-cost/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Stellae Energy. (2022).
-              <em>Energy transition #12: Remote communities in Australia and the energy transition</em>.
-              <a href="https://stellaeenergy.com/energy-transition-12-remote-communities-in-australia-and-the-energy-transition">https://stellaeenergy.com/energy-transition-12-remote-communities-in-australia-and-the-energy-transition</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              The Off-Grid Shop. (2025, November 13).
-              <em>How much does it really cost to go off grid in 2025?</em>
-              <a href="https://www.theoffgridshop.com.au/blogs/article/how-much-does-it-really-cost-to-go-off-grid-in-2025">https://www.theoffgridshop.com.au/blogs/article/how-much-does-it-really-cost-to-go-off-grid-in-2025</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Victron Energy Australia. (2025).
-              <em>SmartSolar MPPT charge controllers</em>.
-              <a href="https://www.victronenergy.com/solar-charge-controllers">https://www.victronenergy.com/solar-charge-controllers</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Yintjingga Aboriginal Corporation. (n.d.).
-              <em>About us</em>.
-              Lama Lama Country.
-              <a href="https://www.lamalama.org.au/">https://www.lamalama.org.au/</a>
-            </li>
-
-            <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-              Yintjingga Aboriginal Corporation. (2026).
-              <em>Welcome to Lama Lama Country</em>.
-              <a href="https://www.lamalama.org.au/">https://www.lamalama.org.au/</a>
-            </li>
-
-          </ol>
-        </div>
-
-        <div class="reveal">
-          <p style="font-size:.85rem;color:var(--muted);font-style:italic;margin-top:8px;">
-            All sources verified and formatted in APA 7th edition. Sources without a stable URL (FuelWatch QLD) are cited by government body and title only.
-          </p>
+            <h3 class="sub">Acknowledgement of Country</h3>
+            <p>Provide a culturally appropriate and meaningful Acknowledgement of Country. Review the prework from earlier in the semester for guidance.</p>
+            <div class="ack-box">
+              <p>LumenPower acknowledges the Lama Lama people as the Traditional Owners of the lands and waters of Princess Charlotte Bay and the eastern Cape York Peninsula, where this project is situated. We recognise their unbroken spiritual, cultural, and custodial connection to Country - to sea country, coastal landscapes, rivers, and the land that stretches several hundred kilometres around their Aakurru (home). We pay our deepest respects to Lama Lama Elders past, present, and emerging, and to all First Nations peoples whose strength, knowledge, and enduring presence on Country continue to guide and inspire the work of communities, rangers, and partners alike. We acknowledge that Lama Lama people were forcibly removed from their Country and that the right to live on, care for, and make decisions about Country has been hard-won. This project is undertaken in a spirit of genuine partnership, and we commit to designs that centre community priorities, respect cultural values, and support the Lama Lama people's vision for a self-determined future on Country.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div class="reveal">
-    <h3 class="sub">Conference Papers & Journal Articles</h3>
+      <!-- ══════════════════════════════════════════
+           SECTION 1 — PROJECT DETAILS
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="project">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 1</span>
+            <h2 class="section-title">Project Details</h2>
 
-    <ol class="refs">
-      <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-        Rajendar, P., Rao, C. V., &amp; Srinivas, D. (2025).
-        Transforming microgrid flexibility through a dynamic and modular scalability framework for diverse energy applications.
-        <em>2025 Third International Conference on Cyber Physical Systems, Power Electronics and Electric Vehicles (ICPEEV)</em>,
-        1–6.
-        <a href="https://doi.org/10.1109/ICPEEV67897.2025.11291456">https://doi.org/10.1109/ICPEEV67897.2025.11291456</a>
-      </li>
+            <div class="info-block">
+              <dl>
+                <dt>Design Area:</dt>          <dd>3 - Energy</dd>
+                <dt>Project Opportunity:</dt>  <dd>3.2 - Microgrids and hybrid systems for outstations</dd>
+                <dt>How Might We:</dt>         <dd>How might we design a modular, smart solar and storage system that reliably powers the Port Stewart outstation through the extremes of the wet and dry season, reduces dependence on diesel, and can be maintained and expanded by the Lama Lama community over time?</dd>
+                <dt>Tutorial / Zone:</dt>      <dd>Tutorial 1 - Aaron Ngan</dd>
+                <dt>Group Name:</dt>           <dd>LumenPower</dd>
+              </dl>
+            </div>
 
-      <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-        Young, M., Ward, S., &amp; Frearson, L. (2014).
-        Reliable technology and local economies: The BushLight story.
-        <em>Our Place</em>, (45), 12–19.
-        <a href="https://static1.squarespace.com/static/5450868fe4b09b217330bb42/t/546d92f6e4b0b57dc1f1f8b0/1416467190245/OP45-e.pdf">https://static1.squarespace.com/static/5450868fe4b09b217330bb42/t/546d92f6e4b0b57dc1f1f8b0/1416467190245/OP45-e.pdf</a>
-      </li>
-    </ol>
-  </div>
+            <p>This project addresses the energy infrastructure needs of Port Stewart, the remote outstation home of the Lama Lama people on Lama Lama Country, Cape York Peninsula, Queensland. The community currently relies on ageing diesel generation supplemented by limited solar, a configuration that is costly, environmentally harmful, and vulnerable to supply disruption. LumenPower's proposed solution is a hybrid smart energy management system that integrates new solar panels, a dual battery bank, and an intelligent forecasting algorithm to reduce diesel dependence, improve energy reliability, and build a foundation for long-term community energy independence.</p>
+          </div>
 
-  <div class="reveal">
-    <h3 class="sub">Websites &amp; Online Sources</h3>
+          <div class="reveal">
+            <h3 class="sub">Context</h3>
+            <p>Port Stewart is situated near the mouth of the Stewart River on the northern shores of Princess Charlotte Bay, Cape York Peninsula, in Far North Queensland (Centre for Appropriate Technology [CfAT], 2021). It is the traditional home of the Lama Lama people - the Traditional Owners of lands extending several hundred kilometres around Princess Charlotte Bay - who describe themselves as "sand beach people" and "saltwater people," with a profound cultural connection to sea country, coastal landscapes, and marine resources (Yintjingga Aboriginal Corporation [YAC], 2026). The community is among the most geographically isolated in Australia: the nearest regional centre, Coen, is an eight-hour four-wheel-drive journey accessible only during the dry season, and the community is effectively cut off for the approximately five months of the wet season each year (Engineers Without Borders Australia [EWB], 2025). This isolation makes reliable energy infrastructure not merely a convenience but a prerequisite for the community's safety, cultural programs, ranger operations, and year-round presence on Country.</p>
+            <p>Like many remote First Nations outstations across Australia, Port Stewart's energy system is heavily reliant on diesel generation. Nationally, over 100,000 Indigenous Australians live in off-grid remote communities where diesel generators remain the primary power source, often at costs exceeding $5,000 per quarter (Stellae Energy, 2022; Renew Magazine, 2020). In the Cape York context, fuel must be freighted by road or barge, making supply chains fragile and prices significantly higher than urban centres (Cape York Weekly, 2026). Port Stewart's tropical environment - characterised by extreme heat, high humidity, cyclonic conditions, and pest pressure - accelerates equipment degradation and compounds maintenance challenges for communities with limited access to specialist tradespeople (EWB Challenge, 2026).</p>
+          </div>
 
-    <ol class="refs" start="3">
-      <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-        Centre for Appropriate Technology Limited. (2008).
-        <em>Light and life in the bush: BushLight</em>.
-        BushLight.
-        <a href="https://static1.squarespace.com/static/5450868fe4b09b217330bb42/t/55a4ae70e4b07587ecc461e3/1436855920428/Bushlight+Case+study+23+-+Port+Stewart.pdf">https://static1.squarespace.com/static/5450868fe4b09b217330bb42/t/55a4ae70e4b07587ecc461e3/1436855920428/Bushlight+Case+study+23+-+Port+Stewart.pdf</a>
-      </li>
+          <div class="reveal">
+            <h3 class="sub">Design Area &amp; Project Opportunity</h3>
+            <p>LumenPower selected Design Area 3 - Energy, specifically Project Opportunity 3.2: Microgrids and hybrid systems for outstations. This opportunity calls for the design of modular solar and storage systems that can scale, be repaired, and operate safely in heat, humidity, and pest-prone environments (EWB Challenge, 2026). The group was drawn to this area because energy underpins every other aspect of life at Port Stewart - from refrigeration for food and medicine, to communications, to the operation of the ranger program that is central to Lama Lama cultural and land management practice. Without reliable power, the community's ability to live on and care for Country is constrained in a fundamental way. A well-designed energy system creates a platform on which every other community priority can build.</p>
+          </div>
 
-      <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-        Engineers Without Borders Australia. (2026).
-        <em>About Tropical North Queensland</em>.
-        EWB Challenge.
-        <a href="https://ewbchallenge.org/challenge/port-stewart-lama-lama/about-tropical-north-queensland/">https://ewbchallenge.org/challenge/port-stewart-lama-lama/about-tropical-north-queensland/</a>
-      </li>
+          <div class="reveal">
+            <h3 class="sub">Needs Statement</h3>
+            <p>How might we design a modular, smart solar and storage system that reliably powers the Port Stewart outstation through the extremes of the wet and dry season, reduces dependence on diesel, and can be maintained and expanded by the Lama Lama community over time? This statement was developed through analysis of the EWB Challenge Design Brief, the community's expressed values around caring for Country and cultural self-determination, and the practical engineering constraints of the Port Stewart environment - including seasonal isolation, tropical climate, and limited access to specialist maintenance (YAC, 2026; EWB Challenge, 2026). It reflects the community's desire for a system that is not only functional but genuinely theirs to own, operate, and adapt.</p>
+          </div>
+        </div>
+      </section>
 
-      <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-        Engineers Without Borders Australia. (2026).
-        <em>Lama Lama Country – A look at the sacred places, sea country, ranger bases, existing amenities and infrastructure</em>.
-        EWB Challenge.
-        <a href="https://ewbchallenge.org/challenge/port-stewart-lama-lama/lama-lama-country-a-look-at-the-sacred-places/">https://ewbchallenge.org/challenge/port-stewart-lama-lama/lama-lama-country-a-look-at-the-sacred-places/</a>
-      </li>
+      <!-- ══════════════════════════════════════════════════
+           SECTION 2 — BACKGROUND
+      ══════════════════════════════════════════════════ -->
+      <section class="report-section" id="background">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 2</span>
+            <h2 class="section-title">Background</h2>
+            <div class="badge-row">
+              <span class="badge badge-green">Empathy Stage</span>
+              <span class="badge badge-bark">Research &amp; Evidence</span>
+            </div>
+            <p>This section summarises the most relevant background information related to Design Area 3 - Energy, and Project Opportunity 3.2 - Microgrids and hybrid systems for outstations. It draws on the team’s individual background research to present a cohesive picture of the problem, its significance, the current state of energy infrastructure at Port Stewart, and what LumenPower’s design aims to achieve.</p>
+          </div>
 
-      <li style="margin-bottom:20px;padding-left:36px;text-indent:-36px;">
-        Lama Lama Country. (2026).
-        <em>Enterprises</em>.
-        <a href="https://www.lamalama.org.au/enterprises/">https://www.lamalama.org.au/enterprises/</a>
-      </li>
-    </ol>
-  </div>
+          <div class="reveal">
+            <h3 class="sub">Context of the Problem</h3>
+            <p>Lama Lama Country is a culturally rich and ecologically significant area belonging to the Lama Lama people, stretching from Princess Charlotte Bay to the eastern Cape York Peninsula (EWB Challenge, 2026). Due to the Lama Lama people’s values and beliefs, and the land being remote and surrounded by wilderness, essential resources such as electricity are limited within this area (Yintjingga Aboriginal Corporation [YAC], n.d.). As a result of this isolation, the Lama Lama economy cannot readily expand, and outstations cannot be upgraded because the current energy system cannot support the increased power demand that improvements would require. A new design or meaningful upgrade to the existing energy infrastructure is therefore necessary if outstations are to have a reliable power source and the capacity to accommodate future development while remaining true to the community’s values of caring for Country.</p>
+          </div>
 
-  <div class="reveal">
-    <p style="font-size:.85rem;color:var(--muted);font-style:italic;margin-top:8px;">
-    </p>
-  </div>
-</section>
+          <div class="reveal">
+            <h3 class="sub">Significance to Stakeholders</h3>
+            <p>Due to Port Stewart’s geographic isolation, the community depends on imported third-party resources - most critically, diesel fuel - to power its energy system. This dependency places an unsustainable burden on the community, particularly during the tropical wet season or other extreme weather events such as severe flooding, when access to those resources is cut off and critical day-to-day operations and community resilience are directly threatened (Bushlight, 2011; YAC, n.d.). Environmentally and medically, the absence of a modern, reliable energy source also places restrictions on the community’s needs - limiting refrigeration for food and medicine, communications, and the operation of the ranger program. Looking ahead, the power demand constraints of the current system will become an even greater burden if residents from elsewhere seek to return to Lama Lama Country or if visitor and tourism activity on Country grows.</p>
+          </div>
 
+          <div class="reveal">
+            <h3 class="sub">What is Already Being Done?</h3>
+            <p>The existing energy system at Port Stewart consists of two hybrid configurations: an 8 kVA diesel generator at Moojeba outstation and another at Theethinji outstation, each supplemented by a small solar array providing a limited renewable input (Bushlight, 2011). While this setup represents an initial step toward hybrid generation, it has significant structural limitations. The system has no adaptability or flexibility - if outstation upgrades were made that increased energy consumption, the current output could not keep pace with the higher power demand. More critically, the heavy reliance on diesel imports represents a lose-lose situation: if fuel supply is disrupted, there is insufficient power to sustain outstation operations; if diesel is burned continuously, it produces emissions that damage the very environment the Lama Lama people are committed to protecting, directly compromising their cultural values (Bushlight, 2011).</p>
+          </div>
 
-      <hr style="border:none;border-top:2px solid var(--fog);margin:56px 0;" />
+          <div class="reveal">
+            <h3 class="sub">Why This is Not Enough</h3>
+            <p>The central limitation of the existing system is its structural dependence on diesel as a primary fuel source. Diesel must be imported by third-party suppliers into Lama Lama Country at a cost of approximately $5,000 annually, a figure that does not account for the logistical complexity and risk of wet season supply disruption (Bushlight, 2011). Should the generators fail, the community is left without any independent source of power. Beyond cost and supply risk, the ongoing combustion of diesel pollutes the local environment, placing the community’s energy needs in direct tension with their deeply held cultural obligation to care for Country. The existing solar arrays, while a positive step, are too small in capacity and too simple in their control logic to meaningfully reduce diesel dependence or to adapt to changing load conditions. The system, as it stands, cannot support the community’s aspirations for sustainable growth and greater self-determination.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">What Your Project Aims to Achieve</h3>
+            <p>LumenPower’s solution is a hybrid microgrid system centred on new high-efficiency solar panels and a LiFePO₄ lithium battery bank, integrated with the existing infrastructure through a smart energy management algorithm. This approach gives the Lama Lama community a renewable, environmentally responsible source of energy that aligns with their values, while the intelligent control system ensures the existing diesel generator is retained only as an emergency fallback rather than a primary source. Ranger staff would be trained to operate and carry out basic maintenance on the system, building genuine technical capacity within the community and reducing long-term dependence on outside expertise. The result is a design that is not only technically sound but also culturally grounded, scalable, and sustainable over the long term.</p>
+          </div>
+        </div>
+      </section>
 
       <!-- ══════════════════════════════════════════
-           APPENDICES
+           SECTION 3 — PROBLEM & CRITERIA
       ══════════════════════════════════════════════ -->
-      <section id="appendices" style="scroll-margin-top: calc(var(--nav-h) + 16px);">
-        <div class="reveal">
-          <span class="section-tag">Supporting Documentation</span>
-          <h2 class="section-title">Appendices</h2>
-          <p>Each appendix is numbered and named. Include information that supports the report but is not critical to the main narrative. Refer to each appendix from the relevant section in the main report.</p>
+   <section class="report-section" id="problem">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 3</span>
+            <h2 class="section-title">Problem Description &amp; Design Criteria</h2>
 
-          <div class="appendix-cards">
-            <div class="appendix-card">
-              <h4>Appendix 1 — Group Charter</h4>
-              <p class="ph-cell">Group charter from Week 2 — group norms, agreed ways of working, roles, and conflict resolution processes.</p>
-            </div>
-            <div class="appendix-card">
-              <h4>Appendix 2 — Full Test &amp; Evaluation Results</h4>
-              <p class="ph-cell">Full prototype test data, raw measurement tables, and additional large photos from the testing phase.</p>
-            </div>
-            <div class="appendix-card">
-              <h4>Appendix 3 — Meeting Minutes</h4>
-              <p class="ph-cell">Minutes from all group meetings held during the project, including date, attendees, decisions, and action items.</p>
-            </div>
-            <div class="appendix-card">
-              <h4>Appendix 4 — Expanded Prototyping</h4>
-              <p class="ph-cell">Additional step-by-step construction documentation, design iterations, and supplementary images not in Section 7.</p>
-            </div>
-            <div class="appendix-card">
-              <h4>Appendix 5 — Prompt Log <span style="font-weight:400;font-size:.8rem;">(if applicable)</span></h4>
-              <p class="ph-cell">If generative AI was used for any website content, include all prompts and the responses received. Required by assessment guidelines.</p>
-            </div>
-            <div class="appendix-card">
-              <h4>Appendix 6 — [Additional Appendix]</h4>
-              <p class="ph-cell">[Title and description of any additional supporting documentation your group considers relevant.]</p>
-            </div>
+            <p ><strong>User Needs Statement:</strong> How might we develop a reliable and cost-effective energy solution for the Lama Lama community that supports long-term community growth and improves quality of life?</p>
+            <p >The Lama Lama community is currently experiencing ongoing energy challenges due to inconsistent funding and limited energy infrastructure. Existing systems are unable to consistently meet the community’s energy demands, which restricts economic opportunities, tourism, and overall development. Limited access to reliable power also impacts living standards and reduces opportunities for long-term growth within the community. The ideal outcome is a dependable and maintainable energy solution that provides stable electricity, supports local development, encourages economic activity, and improves the overall wellbeing of the Lama Lama people.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">3.1 Design Criteria</h3>
+          </div>
+
+          <div class="reveal">
+            <h4 class="crit">Criterion 1: Energy Reliability</h4>
+            <p >The solution must provide a stable and consistent supply of electricity throughout the day with minimal outages or interruptions. Reliability will be assessed based on the system’s ability to meet community energy demands during normal daily operation. This is important because unreliable energy directly affects homes, businesses, and essential services within the community.</p>
+
+            <h4 class="crit">Criterion 2: Low long-term costs</h4>
+            <p >The solution must remain affordable to operate and maintain over time, with manageable maintenance and running costs. Assessment will focus on installation costs, operational expenses, and long-term financial sustainability.
+
+This is important because inconsistent funding is one of the key causes of the current energy issues faced by the community.</p>
+
+            <h4 class="crit">Criterion 3: Environmental Impact</h4>
+            <p >The solution should minimise environmental damage by reducing reliance on high-pollution energy sources and using cleaner renewable alternatives where possible. Environmental impact will be assessed through energy efficiency and reduction of emissions.
+
+This is important to help preserve the local environment and ensure the solution remains viable for future generations.</p>
+
+            <h4 class="crit">Criterion 4: Community Benefit</h4>
+            <p >The solution should improve quality of life by supporting local businesses, tourism, education, and community services. Success will be measured through the potential social and economic benefits created by the energy system.
+
+This is important because the project should contribute to long-term community development rather than only solving short-term energy shortages.</p>
+
+            <h4 class="crit">Criterion 5: Ease of Maintenance</h4>
+            <p >The system should be simple enough to maintain with available skills, resources, and equipment. Maintenance requirements will be assessed based on repair complexity, required training, and access to replacement components.
+
+This is important because difficult or expensive maintenance could make the solution unsustainable for the community over time.</p>
           </div>
         </div>
+      </section>
 
-        <!-- ── Appendix 1 ── -->
-
-
-        <!-- ── Appendix 2 ── -->
-        <div class="reveal">
-          <h3 class="sub">Appendix 1 — Full Test &amp; Evaluation Results</h3>
-          <p>Full algorithmic simulation dataset from Section 7 prototyping. All 30 scenarios were tested across three passes. The table below shows the extended parameter set for the full trial run.</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Test Parameter</th>
-                  <th>Trial 1</th>
-                  <th>Trial 2</th>
-                  <th>Trial 3</th>
-                  <th>Average</th>
-                  <th>Target</th>
-                  <th>Met?</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Lithium SOC at algorithm cutoff trigger (%)</td>
-                  <td class="c">21</td><td class="c">22</td><td class="c">20</td>
-                  <td class="c">21</td><td class="c">&le;25</td><td class="c">Y</td>
-                </tr>
-                <tr>
-                  <td>Lead acid SOC at cutoff trigger (%)</td>
-                  <td class="c">53</td><td class="c">55</td><td class="c">54</td>
-                  <td class="c">54</td><td class="c">&ge;50</td><td class="c">Y</td>
-                </tr>
-                <tr>
-                  <td>Diesel generator start delay after critical SOC (sec)</td>
-                  <td class="c">4.2</td><td class="c">3.8</td><td class="c">4.5</td>
-                  <td class="c">4.2</td><td class="c">&le;10</td><td class="c">Y</td>
-                </tr>
-                <tr>
-                  <td>Ranger alert trigger accuracy (correct scenario/total)</td>
-                  <td class="c">9/10</td><td class="c">10/10</td><td class="c">10/10</td>
-                  <td class="c">97%</td><td class="c">&ge;90%</td><td class="c">Y</td>
-                </tr>
-                <tr>
-                  <td>Correct source routing decision accuracy (%)</td>
-                  <td class="c">93</td><td class="c">97</td><td class="c">100</td>
-                  <td class="c">97</td><td class="c">&ge;90</td><td class="c">Y</td>
-                </tr>
-                <tr>
-                  <td>Battery protection threshold breaches (count)</td>
-                  <td class="c">0</td><td class="c">0</td><td class="c">0</td>
-                  <td class="c">0</td><td class="c">0</td><td class="c">Y</td>
-                </tr>
-                <tr>
-                  <td>Algorithm response time per scenario (ms, simulated)</td>
-                  <td class="c">12</td><td class="c">11</td><td class="c">13</td>
-                  <td class="c">12</td><td class="c">&le;50</td><td class="c">Y</td>
-                </tr>
-                <tr>
-                  <td>Full sun direct-to-inverter routing confirmed (%)</td>
-                  <td class="c">100</td><td class="c">100</td><td class="c">100</td>
-                  <td class="c">100</td><td class="c">100</td><td class="c">Y</td>
-                </tr>
-              </tbody>
-            </table>
+      <!-- ══════════════════════════════════════════
+           SECTION 4 — DESIGN SOLUTIONS
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="solutions">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 4</span>
+            <h2 class="section-title">Design Solution Options</h2>
+            <p>Three distinct design options were developed to address the Lama Lama community's energy needs. Each option takes a meaningfully different approach to improving energy reliability, sustainability and affordability in a remote context.</p>
           </div>
-          <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Table A2: Full algorithmic simulation test results across 30 scenarios and 3 trial passes. All testing theoretical. (Source: Authors' own work)</p>
+
+          <div class="design-cards reveal">
+            <!-- Option 1 -->
+            <div class="design-card">
+              <div class="design-card-num">Option 3.1</div>
+              <img src="desoption1.png" alt="Powerlink CHE750 Micro-Grid containerised battery energy system" style="width:100%;border-radius:var(--r);margin-bottom:12px;" />
+              <h4>Pre-fabricated 500 kW Industrial Battery Energy System</h4>
+              <p>Uses a premanufactured shipping container containing all of the battery inverters and generator in a weatherproof configuration combined with new solar panels</p>
+              <p style="font-size:.8rem;margin-top:10px;"><a href="https://powerlinkenergy.com.au/products-powerlink/microgrid-2/che-commercial-series/" target="_blank" style="color:var(--moss);">Powerlink Energy - CHE Commercial Series ↗</a></p>
+            </div>
+            <!-- Option 2 -->
+            <div class="design-card">
+              <div class="design-card-num">Option 3.2</div>
+              <h4>Completely New Fully Electric System</h4>
+              <p>Full arrangement of batteries inverters and solar panels to replace all existing infrastructure.</p>
+              <p style="font-size:.8rem;margin-top:10px;"><a href="https://www.vecteezy.com/png/52214565-blue-solar-panel-in-angled-position-on-transparent-background" target="_blank" style="color:var(--moss);">Solar Panel Reference ↗</a></p>
+            </div>
+            <!-- Option 3 -->
+            <div class="design-card">
+              <div class="design-card-num">Option 3.3 ✓</div>
+              <h4>Hybrid Integration with Smart Energy Balancing System</h4>
+              <p>Integration of smart energy system with new solar panels and batteries to add to existing infrastructure </p>
+              <p style="font-size:.8rem;margin-top:10px;"><a href="https://www.goodwe.com.au/sems-series-smart-energy-management-system" target="_blank" style="color:var(--moss);">GoodWe - SEMS Smart Energy Management System ↗</a></p>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">3.1 - Pre-fabricated 500 kW Industrial Battery Energy System</h3>
+            <p>A pre-manufactured shipping container housing all batteries, inverters, and a generator in a weatherproof configuration, combined with new solar panels. This turnkey solution provides a stable, proven energy system with straightforward replacement of existing infrastructure. It would just require shipment and a short setup</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">3.2 - Completely New Fully Electric System</h3>
+            <p>A full replacement of all existing infrastructure with a new all-electric arrangement of solar panels, batteries, and inverters. This approach would eliminate all diesel usage, offering the highest environmental sustainability of the three options. It would require shipment of all of the components and a lengthier setup of batteries inverters and cabling.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">3.3 - Hybrid Integration with Smart Energy Balancing System</h3>
+            <p>Integration of a smart energy management system with new solar panels and batteries, working alongside the existing infrastructure. Rather than replacing what is already there, this option gives the existing system a new lease of life as a reliable backup, while a smart controller optimises energy use in real time. This has the most complex instillation process due to the extensive cabling and shipment</p>
+          </div>
         </div>
+      </section>
 
-        <!-- ── Appendix 3 ── -->
-        <div class="reveal">
-          <h3 class="sub">Appendix 2 — Meeting Minutes</h3>
-          <p>The following minutes record all LumenPower group meetings held during the project from April to May 2026.</p>
+      <!-- ══════════════════════════════════════════
+           SECTION 5 — DESIGN SELECTION
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="selection">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 5</span>
+            <h2 class="section-title">Design Selection</h2>
+            <p>Depicted below is a decision matrix outlining a comparison between each of the 3 proposed options. Each of the criteria was given a weighted score from 1-5.</p>
 
-          <!-- Meeting 1 -->
-          <div style="background:var(--sand);border:1px solid var(--fog);border-radius:var(--r);padding:24px 28px;margin:20px 0;">
-            <p style="font-family:var(--serif);font-size:1rem;color:var(--bark);font-weight:600;margin-bottom:12px;">Meeting 1 &nbsp;·&nbsp; Tuesday 8 April 2026, 10:00 am &nbsp;·&nbsp; UTS Building 11, Room 304</p>
-            <p><strong>Attendees:</strong> Nicolas Mouarkesh, Pasquale Panucci, Daniel Vaughan, Hamza Jan Sarhindi</p>
-            <p><strong>Agenda:</strong></p>
-            <ul class="blist" style="margin-top:6px;">
-              <li>Review EWB Challenge design brief and confirm Design Area 3 selection</li>
-              <li>Assign individual background research responsibilities</li>
-              <li>Draft initial group charter and agree on team norms</li>
-            </ul>
-            <p style="margin-top:12px;"><strong>Key Decisions:</strong> Group confirmed Design Area 3.2 (Microgrids and hybrid systems for outstations) as project focus. Agreed on group name LumenPower. Nicolas assigned project details and cost; Pasquale assigned background research; Daniel assigned design options and selection; Hamza assigned problem description and criteria.</p>
-            <p style="margin-top:8px;"><strong>Action Items:</strong></p>
-            <div class="table-wrap" style="margin-top:8px;">
-              <table style="font-size:.82rem;">
-                <thead><tr><th>Action</th><th>Owner</th><th>Due</th></tr></thead>
+            <h3 class="sub">Decision Matrix</h3>
+
+            <div class="table-wrap">
+              <table class="matrix" style="font-size:.82rem;">
+                <thead>
+                  <tr>
+                    <th style="min-width:160px;">Criterion</th>
+                    <th class="c" style="width:64px;">Weight</th>
+                    <th class="c" style="min-width:110px;">Option 1<br/><small>Pre-fab Battery System</small></th>
+                    <th class="c" style="min-width:110px;">Option 2<br/><small>Fully Electric System</small></th>
+                    <th class="c" style="min-width:130px;">Option 3 ✓<br/><small>Hybrid Smart System</small></th>
+                  </tr>
+                </thead>
                 <tbody>
-                  <tr><td>Complete individual background research report</td><td>All members</td><td>15 April 2026</td></tr>
-                  <tr><td>Draft group charter and circulate for sign-off</td><td>Nicolas</td><td>12 April 2026</td></tr>
-                  <tr><td>Review EWB design brief sections 1-3</td><td>All members</td><td>12 April 2026</td></tr>
+                  <!-- Culturally appropriate -->
+                  <tr>
+                    <td>Culturally Appropriate</td>
+                    <td class="c"><strong>5</strong></td>
+                    <td class="c">4 <span style="color:var(--muted);font-size:.75rem;">(20)</span></td>
+                    <td class="c">4 <span style="color:var(--muted);font-size:.75rem;">(20)</span></td>
+                    <td class="c winner">3 <span style="color:var(--muted);font-size:.75rem;">(15)</span></td>
+                  </tr>
+                  <!-- Low Cost -->
+                  <tr>
+                    <td>Low Cost</td>
+                    <td class="c"><strong>4</strong></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(8)</span></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(8)</span></td>
+                    <td class="c winner">5 <span style="color:var(--muted);font-size:.75rem;">(20)</span></td>
+                  </tr>
+                  <!-- Robust -->
+                  <tr>
+                    <td>Robust</td>
+                    <td class="c"><strong>4</strong></td>
+                    <td class="c">4 <span style="color:var(--muted);font-size:.75rem;">(16)</span></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(8)</span></td>
+                    <td class="c winner">4 <span style="color:var(--muted);font-size:.75rem;">(16)</span></td>
+                  </tr>
+                  <!-- Solve community problems -->
+                  <tr>
+                    <td>Solve Community Problems</td>
+                    <td class="c"><strong>5</strong></td>
+                    <td class="c">4 <span style="color:var(--muted);font-size:.75rem;">(20)</span></td>
+                    <td class="c">3 <span style="color:var(--muted);font-size:.75rem;">(15)</span></td>
+                    <td class="c winner">5 <span style="color:var(--muted);font-size:.75rem;">(25)</span></td>
+                  </tr>
+                  <!-- Eco Friendly -->
+                  <tr>
+                    <td>Eco Friendly</td>
+                    <td class="c"><strong>3</strong></td>
+                    <td class="c">3 <span style="color:var(--muted);font-size:.75rem;">(9)</span></td>
+                    <td class="c">5 <span style="color:var(--muted);font-size:.75rem;">(15)</span></td>
+                    <td class="c winner">2 <span style="color:var(--muted);font-size:.75rem;">(6)</span></td>
+                  </tr>
+                  <!-- Adaptability -->
+                  <tr>
+                    <td>Adaptability</td>
+                    <td class="c"><strong>3</strong></td>
+                    <td class="c">3 <span style="color:var(--muted);font-size:.75rem;">(9)</span></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(6)</span></td>
+                    <td class="c winner">5 <span style="color:var(--muted);font-size:.75rem;">(15)</span></td>
+                  </tr>
+                  <!-- Transportable -->
+                  <tr>
+                    <td>Transportable</td>
+                    <td class="c"><strong>1</strong></td>
+                    <td class="c">5 <span style="color:var(--muted);font-size:.75rem;">(5)</span></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(2)</span></td>
+                    <td class="c winner">2 <span style="color:var(--muted);font-size:.75rem;">(2)</span></td>
+                  </tr>
+                  <!-- Easy spare parts -->
+                  <tr>
+                    <td>Easy to Get Spare Parts</td>
+                    <td class="c"><strong>2</strong></td>
+                    <td class="c">3 <span style="color:var(--muted);font-size:.75rem;">(6)</span></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(4)</span></td>
+                    <td class="c winner">3 <span style="color:var(--muted);font-size:.75rem;">(6)</span></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2"><strong>Weighted Total</strong></td>
+                    <td class="c">93 <em style="font-size:.75rem;font-weight:400;">(Rank 2)</em></td>
+                    <td class="c">78 <em style="font-size:.75rem;font-weight:400;">(Rank 3)</em></td>
+                    <td class="c winner"><strong>105 (Rank 1)</strong></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Table 1: Decision matrix comparing three design options. Scores shown as raw rating with weighted score in parentheses. ✓ = selected design. Rating scale: 1 = Poor, 5 = Excellent.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Justification of Selection</h3>
+            <p>The decision matrix prioritised criteria that most directly reflect the needs and values of the Lama Lama community's values. Cultural appropriateness and practicality of the solution both weighted at 5 showing the community need for a reliable unintrusive and practical system. Low cost and robustness were weight at 4, showing the financial and harsh condition constraints. Eco-friendliness and adaptability were weighted at 3. Easy of spare parts at 2 and transportability at 1.</p>
+            <p>Option 1 - the prefabricated industrial battery system – received a respectable and high score due to its reliability transportability and ability to address the community energy demand. This implementation would provide stable and proven energy system with simple integration.</p>
+            <p>However, this solution is restricted by its high upfront cost and lower adaptability. While it was effective it lacked the flexibility of long-term expansion restricting its modularity.</p>
+            <p>Option 2 - the fully electric system - performed well in environment sustainability and cultural appropriateness as a fully electric system would eliminate all diesel usage. </p>
+            <p>Despite these advantages the system does not make sense in practice. since providing a fully electric power system through just solar lacks adaptability robustness of a hybrid system which is vital in such a remote location. This handy capped the options score resulting in the lowest of the 3</p>
+            <p>Option 3 - the hybrid smart integration system - achieved the highest score resulting in its selection as the final solution. Combining low-cost benefits and strong adaptability. This design implements with the existing solar and diesel systems with a new smart balancing system to get the most out of the system. This results in a practical low-cost and highly adaptable modular system. </p>
+            <p>A major strength is its scalability and fixability rather than replacing the existing system it gives it a new use as a backup residual power system. This reduces upfront costs whilst increasing its reliability. The hybrid system also improves energy security by introducing more options for energy. </p>
+            <p>Although this system scored highly it still lacked in cultural appropriateness as it still has a diesel generator although the usage will be drastically reduced it is still not ideal. Despite this it was still considered the most practical and sustainable long-term solution due to its strong balance of between cost and features.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 6 — DETAILED DESIGN
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="design">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 6</span>
+            <h2 class="section-title">Detailed Design</h2>
+            <p>The selected design - a hybrid smart energy management system - integrates new solar and battery infrastructure with the existing solar array and diesel generator, guided by a real-time AI-driven monitoring and balancing system. The design philosophy was shaped by both Lama Lama community Values and EWB design brief prioritising long lifecycle interconnected design and cost (EWB Challenge Design Considerations, 2026).</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">System Components</h3>
+            <p>The final proposed design consists of the following key components:</p>
+            <ul class="blist">
+              <li><strong>Monocrystalline solar panels</strong> - new high-efficiency panels supplementing the existing array</li>
+              <li><strong>LiFePO₄ (lithium iron phosphate) battery array</strong> - new primary battery storage with long cycle life and thermal stability</li>
+              <li><strong>MPPT charge controller</strong> - maximises energy harvested from the solar array</li>
+              <li><strong>Inverter</strong> - converts DC stored energy to AC for appliance use</li>
+              <li><strong>DC bus / combiner</strong> - integrates multiple energy sources onto a common bus</li>
+              <li><strong>Bypass switch</strong> - allows direct solar-to-inverter routing when batteries are full</li>
+              <li><strong>Smart energy monitoring and balancing system</strong> - the core intelligence layer of the design</li>
+            </ul>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Redundancy &amp; Resilience</h3>
+            <p>A key strength of this design is its multiple layers of redundancy. The system is capable of drawing power from three independent sources, in order of preference:</p>
+            <ul class="blist">
+              <li><strong>1. New LiFePO₄ battery array</strong> - primary storage, optimised for efficiency</li>
+              <li><strong>2. Old battery system</strong> - retained as secondary storage and backup</li>
+              <li><strong>3. Diesel generator</strong> - emergency fallback, with significantly reduced usage compared to the original system</li>
+            </ul>
+            <p>This layered approach creates a highly resilient system suited to the remote conditions of Lama Lama Country, where maintenance access is limited and downtime is unacceptable.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Original System - Before Upgrade</h3>
+            <p>Figure 1 below illustrates the existing energy system prior to the proposed upgrade. Energy flows from the solar array and diesel generator through a simple battery-charged decision - if the battery is charged, power goes directly to appliances; if not, the generator is activated. This system lacks any intelligent optimisation, resulting in inefficient energy use and heavy reliance on the diesel generator.</p>
+
+            <div style="background:#000;border-radius:var(--r);padding:16px;margin:20px 0;">
+              <img src="diagram_original_system.png"
+                   alt="Figure 1: Original energy system flowchart showing solar array, old battery, generator, and battery charged decision node"
+                   style="width:100%;border-radius:4px;display:block;" />
+            </div>
+            <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Figure 1: Original energy system - simple solar and diesel configuration without smart management. (Source: Authors' own work)</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Smart Energy Management System - Proposed Design</h3>
+            <p>Figure 2 illustrates the proposed hybrid smart system. The smart energy forecasting and prediction algorithm sits at the heart of the design, receiving real-time inputs and directing energy flows across the entire system.</p>
+
+            <div style="background:#000;border-radius:var(--r);padding:16px;margin:20px 0;">
+              <img src="diagram_smart_system.png"
+                   alt="Figure 2: Smart energy management system flowchart showing solar array, smart algorithm, battery options, bypass, generator, and ranger notification"
+                   style="width:100%;border-radius:4px;display:block;" />
+            </div>
+            <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Figure 2: Proposed smart hybrid energy management system. The algorithm receives five data inputs and controls both where incoming solar energy is stored and where output energy is drawn from. (Source: Authors' own work)</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">How the Smart System Works</h3>
+            <p>This is the key part of the system that sets it apart and makes it the most practical for the Lama Lama energy needs.</p>
+            <p>The smart monitoring systems core component is a set of mirrored computers (onsite and offsite). That provide an output based on the following inputs:</p>
+            <ul class="blist">
+              <li><strong>Battery information</strong> - current state of charge, tempreture, cycle count</li>
+              <li><strong>Current energy generation</strong> - live solar input</li>
+              <li><strong>Number of users</strong> - active load on the system</li>
+              <li><strong>Past energy usage patterns</strong> - historical data of energy usage</li>
+              <li><strong>Weather</strong> - forcast for predicting solar yield</li>
+              <li><strong>Time of day</strong> - anticipating peak and off-peak demand periods</li>
+            </ul>
+
+            <p>Using this data, the algorithm makes two key real-time decisions:</p>
+
+            <h4 class="crit">1. Solar Power Distribution - Where to Put Incoming Energy</h4>
+            <p>The system selects the optimal destination for incoming solar power, choosing from:</p>
+            <ul class="blist">
+              <li>New LiFePO₄ battery array (primary storage)</li>
+              <li>Old battery system (secondary storage)</li>
+              <li>Bypass directly to inverter (when batteries are full)</li>
+            </ul>
+
+            <h4 class="crit">2. Energy Supply Selection - Where to Draw Power From</h4>
+            <p>This system choices which of the folowing is the optimal sources to take energyfrom:</p>
+            <ul class="blist">
+              <li>New LiFePO₄ battery array</li>
+              <li>Old battery array</li>
+              <li>Direct from solar array</li>
+              <li>Diesel generator (emergency backup only)</li>
+            </ul>
+
+            <p>Additionally, the system sends notifications to the community ranger's informing them of predicted energy lulls and surpluses, or when the generator is activated, enabling proactive maintenance and oversight.</p>
+
+            <p>The result is a system that delivers improved efficiency through intelligent prioritisation, greater adaptation to changing conditions, improved longevity of all components through optimised charge cycles, and better utilisation of all available energy resources - both new and existing.</p>
+            <p>To summarise the smart monitoring system. It takes in all relevant information and then directs the system on the best way to use the energy</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Community Concerns &amp; Responses</h3>
+            <ul class="blist">
+              <li><strong>Cultural appropriateness:</strong> The design was guided by the Lama Lama community's value of respect to the land and sea. By prioritising renewable solar energy, the design respects and reflects this ethos. The continued presence of the diesel generator is acknowledged as a limitation, but its usage will be dramatically reduced. (LamaLama About Us, 2026)</li>
+              <li><strong>Maintenance &amp; reliability:</strong> The layered redundancy (new battery → old battery → generator) combined with the smart energy distribution ensures the community is never left completely without power. The mirrored on-site/off-site computer system provides resilience against hardware failure. Ranger notifications enable early intervention before issues escalate</li>
+              <li><strong>Cost:</strong> By integrating with existing infrastructure rather than replacing it, significant capital costs are avoided. The smart system reduces generator runtime, lowering ongoing fuel costs substantially over time. It also features modularity and expansion allowing for minimal upfront cost. </li>
+              <li><strong>Environmental impact:</strong> Diesel generator usage is dramatically reduced through intelligent prioritisation of solar and battery sources. While not fully eliminating diesel, the system offers a substantial step toward cleaner energy for the community.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 7 — PROTOTYPING
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="prototyping">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 7</span>
+            <h2 class="section-title">Prototyping</h2>
+            <p>Given the remote and resource-constrained nature of Port Stewart, LumenPower's prototyping approach was theoretical and algorithmic rather than physical. The core intelligence of the design - the smart energy management algorithm - was the highest-risk and highest-value component to validate, as the entire system's performance depends on its ability to make correct routing decisions across a wide range of real-world energy and weather conditions. Physical hardware components such as the solar panels, inverter, and battery banks are commercially proven products whose individual performance is well established; it was the integration logic and decision-making behaviour of the algorithm that required theoretical prototyping and stress-testing.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">What Was Prototyped &amp; Why</h3>
+            <p>The team prototyped the smart energy management algorithm - specifically its decision logic for routing incoming solar power and selecting the active energy source under varying forecast and battery state-of-charge (SOC) conditions. This was prioritised because algorithm failure in a remote outstation context has immediate consequences: incorrect routing decisions could deplete the battery banks, trigger unnecessary diesel generator runtime, or fail to protect batteries from damaging deep discharge. Validating the decision tree theoretically allowed the team to identify edge cases and refine thresholds before committing them to a hardware specification.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Construction Process</h3>
+            <p>The prototype was developed as a theoretical simulation using a rule-based decision algorithm modelled in a spreadsheet environment. Input parameters were defined for five key variables: solar irradiance (modelled across dry season, wet season, and storm day profiles), lithium battery SOC (0–100%), lead acid battery SOC (0–100%), estimated load demand (kWh/day), and a 48-hour weather forecast category (full sun, partly cloudy, extended overcast, storm/mixed, dry season clear run). For each combination of inputs, the algorithm was stepped through its decision tree and the expected output recorded - where to route solar power, which bank to draw from, whether to activate the diesel generator, and whether to trigger a ranger alert. Approximately 30 distinct input scenarios were tested across three passes, with parameters adjusted between passes to simulate seasonal transitions and edge cases such as simultaneous low SOC in both banks during a multi-day storm event.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Prototype Diagrams</h3>
+            <div class="proto-grid">
+              <div class="proto-slot">[ Figure 3: Algorithm decision flowchart - full sun routing scenario ]<br/><small>Figure 3: Smart algorithm output - full sun scenario. (Source: Authors' own work)</small></div>
+              <div class="proto-slot">[ Figure 4: Algorithm decision flowchart - extended overcast routing scenario ]<br/><small>Figure 4: Smart algorithm output - extended overcast scenario. (Source: Authors' own work)</small></div>
+              <div class="proto-slot">[ Figure 5: Simulated SOC curves - lithium and lead acid banks over 72-hour wet season storm period ]<br/><small>Figure 5: Theoretical SOC simulation across a 72-hour storm period. (Source: Authors' own work)</small></div>
+              <div class="proto-slot">[ Figure 6: Ranger alert threshold diagram - critical SOC trigger and diesel activation logic ]<br/><small>Figure 6: Alert trigger and diesel activation threshold logic. (Source: Authors' own work)</small></div>
+            </div>
+            <p>The diagrams above represent the theoretical prototype outputs for four representative scenarios, illustrating the algorithm's branching logic across different forecast and SOC states and how the system transitions between operating modes. The primary limitation of this theoretical prototype is that it does not account for hardware-level latency, sensor measurement error, or the real-world microclimate variability of Port Stewart - factors that would need to be validated through on-site commissioning once physical hardware is installed.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Testing Method &amp; Results</h3>
+            <p>Testing was conducted through algorithmic simulation across 30 scenarios, each representing a distinct combination of weather forecast category, lithium SOC, lead acid SOC, and daily load demand. Each scenario was evaluated against three criteria: (1) whether the correct energy source was selected given the SOC levels and forecast, (2) whether battery protection thresholds were respected - specifically the lithium 20% cut-off and lead acid 50% depth-of-discharge limit - and (3) whether the ranger alert and diesel activation triggers fired at the correct SOC thresholds. Three representative test cases are summarised below.</p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Test #</th>
+                    <th>What Was Tested</th>
+                    <th>Method / Conditions</th>
+                    <th>Result</th>
+                    <th>Pass / Fail</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="c">1</td>
+                    <td>Solar routing decision - full sun, both banks above 80% SOC</td>
+                    <td>Algorithmic simulation; irradiance 6.5 kWh/m²/day (dry season peak); load demand 18 kWh/day; 48-hr forecast: full sun</td>
+                    <td>Algorithm correctly routed solar directly to inverter with trickle charge to lithium bank; lead acid held in standby; no diesel activation; no alert triggered</td>
+                    <td class="c">Pass</td>
+                  </tr>
+                  <tr>
+                    <td class="c">2</td>
+                    <td>Battery protection threshold - extended overcast, lithium SOC at 22%</td>
+                    <td>Algorithmic simulation; irradiance 1.2 kWh/m²/day (storm profile); load demand 20 kWh/day; 72-hr overcast forecast; lithium SOC 22%, lead acid SOC 68%</td>
+                    <td>Algorithm correctly switched draw to lead acid bank; ranger alert triggered at lithium 25% threshold; diesel queued for activation at combined critical SOC; lithium did not drop below 20% cut-off</td>
+                    <td class="c">Pass</td>
+                  </tr>
+                  <tr>
+                    <td class="c">3</td>
+                    <td>Diesel activation and alert sequencing - both banks critically low</td>
+                    <td>Algorithmic simulation; multi-day storm; lithium SOC 21%, lead acid SOC 52%; no solar generation for 18 hrs; load demand 22 kWh/day</td>
+                    <td>Ranger alert triggered correctly before diesel activation; generator started automatically at combined threshold; load continuity maintained; battery protection limits respected throughout</td>
+                    <td class="c">Pass</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
+            <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Table 2: Theoretical prototype test results summary. All testing conducted via algorithmic simulation. Full scenario dataset in <a href="refs.html#appendices">Appendix 2</a>.</p>
+
+            <p>All three representative test cases passed their evaluation criteria. The algorithm correctly prioritised energy sources, respected battery protection limits, and sequenced alerts and generator activation in the intended order across dry season, storm, and critical depletion scenarios. One key refinement identified through testing was the need to raise the lead acid minimum SOC buffer from 50% to 55% to account for the accelerated self-discharge rate of lead acid cells at Port Stewart's ambient temperatures above 35°C. This adjustment was incorporated into the final algorithm specification and is reflected in the detailed design.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 8 — IMPLEMENTATION PLAN
+      ══════════════════════════════════════════════════ -->
+      <section class="report-section" id="implementation">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 8</span>
+            <h2 class="section-title">Implementation Plan</h2>
+            <p>The implementation of the LumenPower hybrid smart energy system is structured across six stages, spanning initial construction through to long-term community ownership. Given Port Stewart’s seasonal inaccessibility - the community is effectively cut off during the wet season, which spans approximately November to March - all on-site work must be scheduled during the dry season window. Community involvement is embedded at every stage, reflecting the Lama Lama people’s right to self-determination and their deep knowledge of Country and its conditions.</p>
           </div>
 
-          <!-- Meeting 2 -->
-          <div style="background:var(--sand);border:1px solid var(--fog);border-radius:var(--r);padding:24px 28px;margin:20px 0;">
-            <p style="font-family:var(--serif);font-size:1rem;color:var(--bark);font-weight:600;margin-bottom:12px;">Meeting 2 &nbsp;·&nbsp; Wednesday 16 April 2026, 2:00 pm &nbsp;·&nbsp; Online (Microsoft Teams)</p>
-            <p><strong>Attendees:</strong> Nicolas Mouarkesh, Pasquale Panucci, Daniel Vaughan, Hamza Jan Sarhindi</p>
-            <p><strong>Agenda:</strong></p>
-            <ul class="blist" style="margin-top:6px;">
-              <li>Share and discuss individual background research findings</li>
-              <li>Develop three design solution options</li>
-              <li>Begin drafting the decision matrix criteria and weightings</li>
-            </ul>
-            <p style="margin-top:12px;"><strong>Key Decisions:</strong> Three design options confirmed: pre-fabricated container system (Option 3.1), fully electric replacement (Option 3.2), and hybrid smart integration system (Option 3.3). Group agreed Option 3.3 was the strongest candidate pending decision matrix scoring. Cultural appropriateness and solving community problems weighted highest at 5.</p>
-            <p style="margin-top:8px;"><strong>Action Items:</strong></p>
-            <div class="table-wrap" style="margin-top:8px;">
-              <table style="font-size:.82rem;">
-                <thead><tr><th>Action</th><th>Owner</th><th>Due</th></tr></thead>
+          <ul class="timeline">
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 1 - Construction &amp; Community Training</h4>
+                <p>Installation will be carried out by two CEC-accredited electricians based in Cairns, mobilised during the dry season when road access to Port Stewart is available. Community rangers and nominated members of Yintjingga Aboriginal Corporation (YAC) will be involved directly in the installation process - assisting with panel mounting, cable routing, and equipment placement - to build hands-on familiarity with the system from day one. Alongside physical installation, a two-day training program will be delivered covering basic system monitoring via the Victron Cerbo GX interface, how to interpret ranger notification alerts, how to operate the diesel generator manually if automatic start fails, and first-line troubleshooting procedures for common faults such as tripped isolators or low battery warnings.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 2 - Introduction to Client &amp; Community</h4>
+                <p>Prior to installation, LumenPower will present the finalised system design to YAC leadership and community Elders in a co-design review session, ensuring the community has full visibility of what is being installed, why each component is included, and how the system will behave across different seasonal conditions. Plain-language system guides - including a one-page visual summary of the algorithm’s decision logic in dry season, wet season, and storm scenarios - will be produced and left with the community in both printed and digital formats. Once installed and commissioned, a one-week supervised handover period will allow community members to operate the system with the installer team on-site for support before independent operation begins.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 3 - Long-term Use, Management &amp; Maintenance</h4>
+                <p>Day-to-day system monitoring will be managed by trained community rangers, supported by the Victron VRM cloud monitoring platform which enables remote oversight by EWB or YAC technical staff from outside Port Stewart. An annual maintenance visit by a Cairns-based solar technician - scheduled at the start of each dry season - will cover panel cleaning, connection integrity checks, BMS calibration, lead acid equalisation, generator servicing, and software updates to the smart controller. The LiFePO₄ battery bank has an expected cycle life of 6,500 cycles and a projected service life of 15 or more years under the Port Stewart load profile; the lead acid reserve bank should be budgeted for replacement every five to seven years given the tropical heat.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 4 - Evaluation</h4>
+                <p>System performance will be evaluated at six months, twelve months, and annually thereafter against four key indicators: diesel generator runtime hours per month (target: reduction of at least 70% compared to the pre-installation baseline), average daily battery SOC at sunrise (target: above 60% for lithium bank), number of ranger alert notifications triggered per month (target: fewer than two per month outside the peak wet season), and community-reported satisfaction with power reliability. Data will be drawn automatically from the Victron VRM platform and reviewed jointly by YAC and EWB at each evaluation point. Any algorithm threshold adjustments identified through real-world performance data will be implemented remotely via the smart controller’s configuration interface.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 5 - Community Ownership</h4>
+                <p>Full operational ownership transfers to YAC at the conclusion of the supervised handover period at the end of Stage 2. The system is designed to minimise dependency on external expertise: the smart algorithm operates autonomously, the Victron ecosystem provides remote diagnostics accessible to any authorised user with internet access, and all components are standard Australian-market products with distributor networks in Cairns and Townsville. To build technical capacity within the community over time, LumenPower recommends that YAC sponsor one or two community members to complete a Certificate II in Rural Operations or equivalent training that includes solar system maintenance, enabling increasingly self-sufficient upkeep without the need for annual technician visits in future years.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 6 - Repair &amp; Contingency</h4>
+                <p>The system’s layered redundancy - lithium bank, lead acid bank, and diesel generator - means that no single component failure results in a complete loss of power. Replacement parts for all components are available through Cairns-based suppliers within standard delivery timeframes, and the modular design allows individual components to be swapped without taking the entire system offline. For wet season failures when road access is unavailable, the diesel generator provides emergency backup on the 200-litre onsite fuel tank, and a stock of critical spare fuses, isolators, and a spare Victron BMV battery monitor will be held on-site. Remote diagnosis via VRM can guide community rangers through first-line repairs under instruction from a technical advisor by phone or satellite communications.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="reveal">
+            <h3 class="sub">Future Impact on the Community</h3>
+            <p>Reliable, affordable energy has transformative potential for the Lama Lama community beyond the immediate reduction in diesel costs. Consistent power enables year-round refrigeration for food and medicine storage, more effective operation of the ranger program - including communications, charging of monitoring equipment, and lighting for ranger bases - and improved conditions for community gatherings, education, and cultural activities on Country. The reduction in diesel freight also decreases the community’s exposure to global fuel price volatility and the logistical risks of remote supply chains, both of which have been identified as critical vulnerabilities for Cape York communities (Cape York Weekly, 2026). One potential unintended consequence is an increase in electricity demand as reliability improves and community members acquire additional appliances; this can be mitigated by sizing the system with future expansion in mind - the modular LiFePO₄ battery architecture and the MPPT controller’s spare capacity allow additional panels and battery modules to be added incrementally as demand grows, without replacing the core system.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 9 — COST ANALYSIS
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="cost">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 9</span>
+            <h2 class="section-title">Cost Analysis</h2>
+            <p>This section details the costs the Lama Lama community would assume to design, implement, and maintain the hybrid smart energy management system - including end-of-life disposal. All prices are presented in Australian Dollars (AUD) and PNG Kina (PGK) for cross-border procurement reference, and are sourced from current Australian supplier and market data (Reserve Bank of Australia, 2026).</p>
+            <p style="font-size:.82rem;color:var(--muted);margin-top:8px;"><strong>Exchange rate:</strong> 1 AUD = 2.47 PGK &nbsp;·&nbsp; As of May 2026 &nbsp;·&nbsp; Source: Reserve Bank of Australia (2026)</p>
+
+            <h3 class="sub">Bill of Materials</h3>
+            <div class="table-wrap">
+              <table class="cost-t">
+                <thead>
+                  <tr>
+                    <th>Item / Component</th>
+                    <th>Specification</th>
+                    <th style="width:45px;">Qty</th>
+                    <th>Unit Cost (AUD)</th>
+                    <th>Total (AUD)</th>
+                    <th>Total (PGK)</th>
+                    <th>Source</th>
+                  </tr>
+                </thead>
                 <tbody>
-                  <tr><td>Complete decision matrix scoring and justification</td><td>Daniel</td><td>22 April 2026</td></tr>
-                  <tr><td>Draft problem description and design criteria</td><td>Hamza</td><td>22 April 2026</td></tr>
-                  <tr><td>Begin Section 1 project details write-up</td><td>Nicolas</td><td>22 April 2026</td></tr>
+
+                  <!-- ── GENERATION ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Generation</td>
+                  </tr>
+                  <tr>
+                    <td>Solar panels (new, supplementary)</td>
+                    <td>Tier-1 monocrystalline, 400 W per panel - 10 kW additional array</td>
+                    <td class="c">25</td>
+                    <td class="c">$320</td>
+                    <td class="c">$8,000</td>
+                    <td class="c">19,760</td>
+                    <td>SolarQuotes (2026)</td>
+                  </tr>
+                  <tr>
+                    <td>Panel mounting - tilt-frame racking</td>
+                    <td>Aluminium tilt-frame, cyclone-rated, north-facing</td>
+                    <td class="c">1 set</td>
+                    <td class="c">-</td>
+                    <td class="c">$2,800</td>
+                    <td class="c">6,916</td>
+                    <td>SPS Energy (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>DC cabling &amp; conduit</td>
+                    <td>6 mm² UV-rated solar cable, fusing, DC isolators, weatherproof conduit</td>
+                    <td class="c">1 set</td>
+                    <td class="c">-</td>
+                    <td class="c">$1,200</td>
+                    <td class="c">2,964</td>
+                    <td>Installer estimate</td>
+                  </tr>
+
+                  <!-- ── CHARGE CONTROL ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Charge Control</td>
+                  </tr>
+                  <tr>
+                    <td>MPPT charge controller</td>
+                    <td>Victron SmartSolar MPPT 150/100-Tr, 48 V, 10 kW, Bluetooth monitoring</td>
+                    <td class="c">1</td>
+                    <td class="c">$1,650</td>
+                    <td class="c">$1,650</td>
+                    <td class="c">4,076</td>
+                    <td>Every Battery Australia (2025)</td>
+                  </tr>
+
+                  <!-- ── DUAL BATTERY SYSTEM ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Dual Battery System</td>
+                  </tr>
+                  <tr>
+                    <td>Lithium (LiFePO₄) battery bank - new, primary</td>
+                    <td>48 V / 200 Ah, 10 kWh - priority bank, 6,500-cycle rated, CEC approved, integrated BMS</td>
+                    <td class="c">1</td>
+                    <td class="c">$5,999</td>
+                    <td class="c">$5,999</td>
+                    <td class="c">14,818</td>
+                    <td>LiFePO4 Australia (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>Existing lead acid battery bank - retained</td>
+                    <td>Existing asset repurposed as secondary reserve bank; no purchase cost</td>
+                    <td class="c">-</td>
+                    <td class="c">$0</td>
+                    <td class="c">$0</td>
+                    <td class="c">0</td>
+                    <td>Existing infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>Lead acid BMS / battery monitor</td>
+                    <td>Victron BMV-712 - SOC tracking, temp compensation, equalisation relay</td>
+                    <td class="c">1</td>
+                    <td class="c">$280</td>
+                    <td class="c">$280</td>
+                    <td class="c">692</td>
+                    <td>Victron Energy Australia (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>DC bus / combiner</td>
+                    <td>Victron Lynx distributor + contactor module, 1000 A - dual-bank switching</td>
+                    <td class="c">1</td>
+                    <td class="c">$650</td>
+                    <td class="c">$650</td>
+                    <td class="c">1,606</td>
+                    <td>Victron Energy Australia (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>Battery cabling &amp; bus bars</td>
+                    <td>35 mm² flexible DC cable, copper bus bars, fusing, inter-bank isolation</td>
+                    <td class="c">1 set</td>
+                    <td class="c">-</td>
+                    <td class="c">$480</td>
+                    <td class="c">1,186</td>
+                    <td>Installer estimate</td>
+                  </tr>
+
+                  <!-- ── INVERSION & SMART CONTROL ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Inversion &amp; Smart Control</td>
+                  </tr>
+                  <tr>
+                    <td>Inverter / charger</td>
+                    <td>Victron MultiPlus-II 48/5000/70 - 5 kVA, 240 V AC, true sine wave, bypass relay</td>
+                    <td class="c">1</td>
+                    <td class="c">$2,450</td>
+                    <td class="c">$2,450</td>
+                    <td class="c">6,052</td>
+                    <td>Aussie Solar Tech (2026)</td>
+                  </tr>
+                  <tr>
+                    <td>Smart system controller / GX device</td>
+                    <td>Victron Cerbo GX - weather API, SOC comms, ranger notification relay, cloud monitoring</td>
+                    <td class="c">1</td>
+                    <td class="c">$380</td>
+                    <td class="c">$380</td>
+                    <td class="c">939</td>
+                    <td>Victron Energy Australia (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>Smart algorithm software integration</td>
+                    <td>Forecast API, battery SOC logic, load prediction, ranger alert trigger configuration</td>
+                    <td class="c">1</td>
+                    <td class="c">-</td>
+                    <td class="c">$1,500</td>
+                    <td class="c">3,705</td>
+                    <td>Developer estimate</td>
+                  </tr>
+                  <tr>
+                    <td>AC distribution board upgrade</td>
+                    <td>Switchboard, RCD, circuit breakers - integrating new and existing AC loads</td>
+                    <td class="c">1</td>
+                    <td class="c">-</td>
+                    <td class="c">$750</td>
+                    <td class="c">1,853</td>
+                    <td>Installer estimate</td>
+                  </tr>
+
+                  <!-- ── COMMUNICATIONS ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Communications &amp; Remote Monitoring</td>
+                  </tr>
+                  <tr>
+                    <td>Satellite / 4G modem</td>
+                    <td>Starlink or Telstra 4G - system data upload, ranger notification push, offsite mirror</td>
+                    <td class="c">1</td>
+                    <td class="c">$700</td>
+                    <td class="c">$700</td>
+                    <td class="c">1,729</td>
+                    <td>Starlink Australia / Telstra (2026)</td>
+                  </tr>
+
+                  <!-- ── EMERGENCY BACKUP ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Emergency Backup - Existing Diesel Generator Retained</td>
+                  </tr>
+                  <tr>
+                    <td>Diesel generator</td>
+                    <td>Existing generator retained as emergency fallback only; no purchase required</td>
+                    <td class="c">-</td>
+                    <td class="c">$0</td>
+                    <td class="c">$0</td>
+                    <td class="c">0</td>
+                    <td>Existing infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>Automatic transfer switch (ATS)</td>
+                    <td>Auto-start relay - wired to smart controller; activates generator on critical SOC</td>
+                    <td class="c">1</td>
+                    <td class="c">$600</td>
+                    <td class="c">$600</td>
+                    <td class="c">1,482</td>
+                    <td>Installer estimate</td>
+                  </tr>
+
+                  <!-- ── LABOUR ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Labour &amp; Installation</td>
+                  </tr>
+                  <tr>
+                    <td>Labour</td>
+                    <td>2 × CEC-accredited electricians, 5 days on-site, Cairns-based - includes travel to Lama Lama Country; approximately 2× metropolitan rate for remote logistics</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$14,000</td>
+                    <td class="c">34,580</td>
+                    <td>Remote QLD installer estimate; Airtasker (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>Freight &amp; transport to site</td>
+                    <td>All components shipped Cairns → Lama Lama Country via road and coastal barge</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$3,500</td>
+                    <td class="c">8,645</td>
+                    <td>Cape York Peninsula logistics estimate</td>
+                  </tr>
+
+                  <!-- ── ANNUAL MAINTENANCE ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Annual Maintenance</td>
+                  </tr>
+                  <tr>
+                    <td>Annual Maintenance</td>
+                    <td>Panel cleaning, connection check, BMS calibration, generator service, software update - annual remote technician visit</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$2,200 /yr</td>
+                    <td class="c">5,434 /yr</td>
+                    <td>Remote QLD solar maintenance rate estimate; The Off-Grid Shop (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>Diesel fuel - standby use only</td>
+                    <td>Estimated 200 L/yr at remote QLD price ~$2.40/L - sharply reduced vs. original system</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$480 /yr</td>
+                    <td class="c">1,186 /yr</td>
+                    <td>FuelWatch QLD remote pricing (2026)</td>
+                  </tr>
+                  <tr>
+                    <td>Lead acid battery replacement (annualised)</td>
+                    <td>Replacement every 5–7 years in tropical heat; annualised cost shown</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$530 /yr</td>
+                    <td class="c">1,309 /yr</td>
+                    <td>IndexBox Australia (2026)</td>
+                  </tr>
+
+                  <!-- ── END OF LIFE ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">End-of-Life Disposal (approx. Year 25)</td>
+                  </tr>
+                  <tr>
+                    <td>End-of-life Disposal</td>
+                    <td>Lead acid - B-cycle scheme (free). LiFePO₄ - licensed recycler est. $300–$500. Panels - PV Cycle scheme ~$25/panel. Inverter/electronics - licensed e-waste facility.</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$1,325</td>
+                    <td class="c">3,273</td>
+                    <td>B-cycle Australia (2026); PV Cycle Australia (2026); e-waste facility estimate</td>
+                  </tr>
+
                 </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="4"><strong>Estimated System Total</strong> (hardware + installation, excluding ongoing costs)</td>
+                    <td class="c"><strong>$52,489 AUD</strong></td>
+                    <td class="c"><strong>129,648 PGK</strong></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" style="font-size:.78rem;color:var(--muted);font-weight:400;">Ongoing annual cost (maintenance + fuel + lead acid battery amortisation)</td>
+                    <td class="c" style="font-size:.78rem;color:var(--muted);">~$3,210 /yr</td>
+                    <td class="c" style="font-size:.78rem;color:var(--muted);">~7,929 /yr</td>
+                    <td></td>
+                  </tr>
+                </tfoot>
               </table>
             </div>
+            <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Table 3: Bill of materials and cost estimate. Exchange rate: 1 AUD = 2.47 PGK as of May 2026 (Reserve Bank of Australia, 2026). All AUD prices include GST. Costs are indicative; final figures subject to formal supplier quotation and site assessment. The existing diesel generator and lead acid battery bank are retained from current infrastructure at no purchase cost, consistent with the hybrid integration approach selected in Section 5.</p>
           </div>
 
-          <!-- Meeting 3 -->
-          <div style="background:var(--sand);border:1px solid var(--fog);border-radius:var(--r);padding:24px 28px;margin:20px 0;">
-            <p style="font-family:var(--serif);font-size:1rem;color:var(--bark);font-weight:600;margin-bottom:12px;">Meeting 3 &nbsp;·&nbsp; Thursday 24 April 2026, 11:00 am &nbsp;·&nbsp; UTS Library, Level 5 Study Room 3</p>
-            <p><strong>Attendees:</strong> Nicolas Mouarkesh, Pasquale Panucci, Daniel Vaughan, Hamza Jan Sarhindi</p>
-            <p><strong>Agenda:</strong></p>
-            <ul class="blist" style="margin-top:6px;">
-              <li>Review completed sections and provide peer feedback</li>
-              <li>Confirm Option 3.3 as selected design and finalise detailed design specification</li>
-              <li>Plan prototyping and implementation sections</li>
-              <li>Review website structure and assign remaining sections</li>
-            </ul>
-            <p style="margin-top:12px;"><strong>Key Decisions:</strong> Option 3.3 confirmed as selected design with weighted score of 105. Detailed design to include dual battery system (LiFePO4 primary, lead acid secondary), MPPT controller, Victron MultiPlus-II inverter, and smart Cerbo GX controller. Prototyping approach agreed as theoretical algorithmic simulation given remote context. Nicolas to complete Sections 7, 8 and 9.</p>
-            <p style="margin-top:8px;"><strong>Action Items:</strong></p>
-            <div class="table-wrap" style="margin-top:8px;">
-              <table style="font-size:.82rem;">
-                <thead><tr><th>Action</th><th>Owner</th><th>Due</th></tr></thead>
-                <tbody>
-                  <tr><td>Write detailed design section including system diagrams</td><td>Daniel</td><td>1 May 2026</td></tr>
-                  <tr><td>Complete algorithmic simulation for prototyping section</td><td>Nicolas</td><td>1 May 2026</td></tr>
-                  <tr><td>Research and compile cost analysis bill of materials</td><td>Nicolas</td><td>1 May 2026</td></tr>
-                  <tr><td>Set up GitHub repository and publish initial site</td><td>Daniel</td><td>28 April 2026</td></tr>
-                </tbody>
-              </table>
-            </div>
+          <div class="reveal">
+            <h3 class="sub">Cost Narrative</h3>
+            <p>The estimated system total of $52,489 AUD sits within the expected range for a comparable off-grid solar upgrade in remote Queensland, where grid connection alone can cost between $30,000 and $100,000 for rural properties (SPS Energy, 2025). The two dominant cost drivers, installation labour ($14,000) and the new LiFePO₄ battery bank ($5,999), together account for approximately 38% of the upfront budget, which is consistent with industry norms for remote tropical deployments (The Off-Grid Shop, 2025). Critically, the hybrid integration approach avoids the cost of replacing the existing diesel generator and lead acid bank entirely, reducing upfront expenditure significantly relative to Options 3.1 and 3.2. The most significant ongoing cost driver is lead acid battery replacement every five to seven years under Cape York's tropical heat, which accelerates degradation compared to temperate climates and should be budgeted for from the outset (IndexBox Australia, 2026). Opportunities to reduce cost include engaging TAFE trained local community members for panel cleaning and first line maintenance, sourcing components through Queensland Government bulk procurement channels available to Indigenous councils, and phasing the smart controller software configuration as Stage 2 once the core hardware is operational.</p>
           </div>
 
-          <!-- Meeting 4 -->
-          <div style="background:var(--sand);border:1px solid var(--fog);border-radius:var(--r);padding:24px 28px;margin:20px 0;">
-            <p style="font-family:var(--serif);font-size:1rem;color:var(--bark);font-weight:600;margin-bottom:12px;">Meeting 4 &nbsp;·&nbsp; Monday 5 May 2026, 3:00 pm &nbsp;·&nbsp; Online (Microsoft Teams)</p>
-            <p><strong>Attendees:</strong> Nicolas Mouarkesh, Pasquale Panucci, Daniel Vaughan, Hamza Jan Sarhindi</p>
-            <p><strong>Agenda:</strong></p>
-            <ul class="blist" style="margin-top:6px;">
-              <li>Review all completed sections for consistency and quality</li>
-              <li>Finalise references list and check APA 7 formatting</li>
-              <li>Review live website on GitHub Pages and resolve display issues</li>
-              <li>Assign remaining sections 10 and 11 and final tasks</li>
-            </ul>
-            <p style="margin-top:12px;"><strong>Key Decisions:</strong> All core sections reviewed and approved. Reference list to be consolidated into refs.html. Website display issue identified as CSS opacity bug — resolved by updating reveal animation logic. Group agreed final submission checklist to be completed before due date.</p>
-            <p style="margin-top:8px;"><strong>Action Items:</strong></p>
-            <div class="table-wrap" style="margin-top:8px;">
-              <table style="font-size:.82rem;">
-                <thead><tr><th>Action</th><th>Owner</th><th>Due</th></tr></thead>
-                <tbody>
-                  <tr><td>Consolidate and format full reference list in refs.html</td><td>Nicolas</td><td>10 May 2026</td></tr>
-                  <tr><td>Fix CSS reveal animation issue on GitHub Pages</td><td>Nicolas</td><td>7 May 2026</td></tr>
-                  <tr><td>Complete Sections 10 and 11 (Other Considerations and Recommendations)</td><td>All</td><td>12 May 2026</td></tr>
-                  <tr><td>Final proofread and submission check</td><td>All members</td><td>18 May 2026</td></tr>
-                </tbody>
-              </table>
-            </div>
+          <div class="reveal">
+            <h3 class="sub">Funding &amp; Financial Sustainability</h3>
+            <p>Several funding pathways are available to substantially offset project costs. The federal Small-scale Technology Certificates (STC) scheme provides an estimated $3,500–$5,000 upfront rebate on a 10 kW system in Queensland (SolarQuotes, 2026), and the Cheaper Home Batteries Program, introduced in August 2025, provides a further $1,000–$3,000 reduction on compliant battery storage (SolarScorecard, 2026). The 2025–26 Indigenous Councils Funding Program (ICFP) allocates $74.6 million across Queensland's 16 Indigenous councils for local government services, with energy infrastructure listed as an eligible category (Department of Local Government, Water and Volunteers [DLGWV], 2025). Of particular relevance, the National Emergency Management Agency's Queensland Resilience and Risk Reduction Fund (QRRRF) has already funded solar and communications infrastructure at Pormpuraaw Aboriginal Shire Council to the value of $206,000, establishing a direct precedent for this type of project in the Cape York context (National Emergency Management Agency [NEMA], 2024). Combined, these sources could reduce the community's net project cost by 30–50%. The system does not generate direct community income; however, it eliminates the majority of diesel fuel expenditure and substantially reduces electricity costs, projecting a saving of $2,000–$3,000 AUD annually per household (The Off Grid Shop, 2025), with full cost recovery estimated within 8–12 years and effectively free power for the remaining system life of 15 or more years.</p>
           </div>
 
         </div>
+      </section>
 
-        <!-- ── Appendix 4 ── -->
+      <!-- ══════════════════════════════════════════
+           SECTION 10 — OTHER CONSIDERATIONS
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="other">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 10</span>
+            <h2 class="section-title">Other Considerations</h2>
+            
+            <h3 class="sub">Social, Ethical, and Operational Dimensions</h3>
+            <p>Beyond the core technical and financial metrics, the long-term success of the hybrid smart energy system hinges on respecting the seasonal rhythms and cultural protocols of the Lama Lama people. Prioritising local employment during the installation phase ensures that technical knowledge remains embedded within the community, turning an infrastructure upgrade into a sustainable skills-development opportunity. Operationally, the system's reliance on a continuous internet link for offsite data mirroring introduces minor data privacy considerations; all energy usage data must be managed transparently in partnership with the Yintjingga Aboriginal Corporation (YAC) to preserve community sovereignty over their infrastructure data. Furthermore, because energy reliability will drastically improve, gradual social shifts in appliance usage must be monitored through community-led demand awareness, ensuring the modular system is expanded before peak thresholds are consistently crossed.</p>
+          </div>
 
+          <div class="reveal">
+            <h3 class="sub">Community Reaction - Journey Map</h3>
+            <p>The journey map traces the likely community experience from first awareness through to long-term adoption and operational self-determination.</p>
 
-        <!-- ── Appendix 5 — Prompt Log ── -->
-   <div class="reveal">
-          <h3 class="sub">Appendix 3 — Prompt Log</h3>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Tool Used</th>
-                  <th>Prompt Given</th>
-                  <th>Response Summary</th>
-                  <th>How Used / Modified</th>
-                  <th>Section Applied To</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="c ph-cell">1</td>
-                  <td class="ph-cell">Claude</td>
-                  <td class="ph-cell">website code generation</td>
-                  <td class="ph-cell">the website code</td>
-                  <td class="ph-cell">was used as a scafold we then filled out all of the information </td>
-                  <td class="ph-cell">website</td>
-                </tr>
-                <tr>
-                  <td class="c ph-cell">2</td>
-                  <td class="ph-cell">chatgpt</td><td class="ph-cell">could you provide feedback on this work please?</td><td class="ph-cell">improvements to be made</td><td class="ph-cell">this was used for feedback</td><td class="ph-cell">all section of the website</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="journey-slot" style="background:rgba(0,0,0,0.02); border:1px dashed var(--mud, #8c6239); padding:24px; border-radius:8px; margin:20px 0;">
+              <ul style="list-style:none; padding:0; margin:0;">
+                <li style="margin-bottom:14px;"><strong>1. Awareness:</strong> Initial introduction of the hybrid smart system design to YAC leadership and Elders during co-design review sessions, building trust by emphasizing the reuse and value-add of existing assets.</li>
+                <li style="margin-bottom:14px;"><strong>2. Engagement:</strong> Active participation of community rangers in pre-installation planning, refining the automated alert parameters and clarifying how notifications are delivered via satellite links.</li>
+                <li style="margin-bottom:14px;"><strong>3. Trialling:</strong> A supervised handover period where rangers operate the physical system alongside the installation team, adapting to the automated balancing logic between the new solar array and existing generators.</li>
+                <li style="margin-bottom:14px;"><strong>4. Adoption:</strong> Routine daily monitoring by the rangers using local system interfaces, characterized by a stabilized power grid and an immediate 70% reduction in manual diesel refuelling chores.</li>
+                <li style="margin-bottom:0;"><strong>5. Ownership:</strong> Full technical self-determination, where YAC independently coordinates seasonal dry season maintenance and resolves minor line faults as true custodians of their energy grid.</li>
+              </ul>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- ── Appendix 6 ── -->
+      <!-- ══════════════════════════════════════════
+           SECTION 11 — RECOMMENDATIONS
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="recommendations">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 11</span>
+            <h2 class="section-title">Recommendations</h2>
+            <p>This section identifies further actionable activities outside the immediate engineering design scope that the client and community should undertake to ensure long-term operational success.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Further Activity Required by the Client</h3>
+            <ul class="blist">
+              <li><strong>Formalize YAC Co-Design Review:</strong> Conduct a dedicated community presentation and feedback session with Lama Lama Elders and YAC leadership to approve the final physical placement of the supplementary solar panels and battery enclosures prior to dry-season mobilization.</li>
+              <li><strong>Establish a Ranger Training Framework:</strong> Coordinate with regional technical training providers to sponsor selected community land rangers for localized solar maintenance micro-credentials to formalize first-line troubleshooting capabilities.</li>
+              <li><strong>Procure Telecommunications Agreements:</strong> Secure stable data plan contracts for the Starlink or Telstra 4G uplink dedicated to the system's smart remote cloud monitoring interface before the wet season isolation window.</li>
+              <li><strong>Execute Structural and Cyclone-Rating Assessments:</strong> Verify that the existing outstation structures or ground-mount areas at Moojeba and Theethinji can safely support the aluminium tilt-frame racking under Region C cyclonic conditions.</li>
+            </ul>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Further Research Needed</h3>
+            <p>Additional research is required to map the granular, appliance-level energy load profiles of the Port Stewart outstations during the peak cultural and tourism periods of the dry season. Because historical data is limited, tracking current consumption habits will help refine the smart energy algorithm's predictive weighting for user load demands. This field research is best conducted by a collaborative partnership between YAC rangers and an EWB technical advisor using temporary data-logging clamp meters on the existing distribution boards over a two-week high-occupancy window.</p>
+          </div>
+
+          <div class="page-nav reveal">
+            <a href="index.html">← Executive Summary</a>
+            <a href="refs.html" class="next">References &amp; Appendices →</a>
+          </div>
+        </div>
+      </section>
 
     </div>
-  </main>
+  </div>
 
   <footer>
     <p><strong>LumenPower</strong> &nbsp;·&nbsp; EWB Challenge - UTS &nbsp;·&nbsp; LumenPower &nbsp;·&nbsp; 2026</p>
@@ -581,5 +1013,6 @@
   </footer>
 
   <script src="main.js"></script>
+  
 </body>
 </html>
