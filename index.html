@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Executive Summary — EWB Challenge</title>
+  <title>Smart Hybrid Energy System — EWB Challenge</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -126,26 +126,31 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-tag">EWB Challenge — Executive Summary &amp; Landing Page</span>
-      <h1>[Title of Your Website]</h1>
-      <p class="tagline">Simple snapshot description of your project — what you set out to solve and how.</p>
+      <span class="hero-tag">EWB Challenge — Executive Summary</span>
 
+      <!-- H1 — website title -->
+      <h1>[Title of Your Website]</h1>
+
+      <!-- Tagline / snapshot description (italics) -->
+      <p class="tagline">The project aims to address the ongoing energy challenge due to inconsistent funding and limited infrastructure through a new smart electric system integrated alongside existing infrastructure.</p>
+
+      <!-- Meta cards -->
       <div class="meta-grid">
         <div class="meta-card">
           <span class="meta-label">Design Area</span>
-          <span class="meta-value">[Number and name from Design Brief]</span>
+          <span class="meta-value">3.2 — Microgrids and hybrid systems for outstations</span>
         </div>
         <div class="meta-card">
-          <span class="meta-label">Project Opportunity</span>
-          <span class="meta-value">[Number and name from Design Brief]</span>
+          <span class="meta-label">Design Brief Description</span>
+          <span class="meta-value">Design modular solar and storage systems that can scale, be repaired, and operate safely in heat, humidity, and pests.</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Keywords</span>
+          <span class="meta-value">Scale · Repaired · Heat · Modular · Solar · Humidity · Pests</span>
         </div>
         <div class="meta-card">
           <span class="meta-label">How Might We</span>
           <span class="meta-value">[Group needs statement]</span>
-        </div>
-        <div class="meta-card">
-          <span class="meta-label">Keywords</span>
-          <span class="meta-value">[keyword, keyword, keyword]</span>
         </div>
         <div class="meta-card">
           <span class="meta-label">Tutorial / Zone</span>
@@ -157,33 +162,79 @@
         </div>
       </div>
 
+      <!-- Proposal Summary -->
       <div class="proposal-box">
         <h3>Proposal Summary</h3>
-        <p>The project aims to address [whatever the issue is] through [how success is achieved]. This section should be around 2–4 sentences describing the challenge and a brief overview of the proposed design.</p>
+        <p>The project aims to address the ongoing energy challenge due to inconsistent funding and limited infrastructure through a new smart electric system integrated alongside existing infrastructure.</p>
 
-        <h3 style="margin-top:18px;">Overview of Design</h3>
-        <p>The [name of design] achieves [aim of design] through [how it mechanically works]. The implementation of the design is supported through [process description].</p>
-        <p>The design includes the following physical components: [list components here]. [Who will use this design? How and why will they use it?]</p>
+        <h3 style="margin-top:20px;">Overview of Design</h3>
+        <p>The smart hybrid system achieves reliable, scalable energy through smart energy forecasting. This implementation is proposed to be supported through ARENA energy grants.</p>
+
+        <p>The design includes the following physical components:</p>
+        <ul style="color:rgba(255,255,255,.78);font-size:.92rem;padding-left:20px;line-height:2;margin-bottom:10px;">
+          <li>Monocrystalline panels</li>
+          <li>LiFePO₄ battery array</li>
+          <li>Bypass switch</li>
+          <li>Inverter</li>
+          <li>MPPT charge controller</li>
+          <li>DC bus / combiner</li>
+        </ul>
+
+        <p>The Lama Lama community will use this system every day for energy to support their lifestyle and cultural values.</p>
       </div>
 
+      <!-- System diagram -->
+      <span class="section-label">System Diagram — Smart Hybrid Energy Management System</span>
+      <div style="background:#000;border-radius:var(--r);overflow:hidden;margin-bottom:32px;animation:fadeUp .55s .32s ease both;">
+        <img src="diagram_smart_system.png"
+             alt="Smart energy management system flowchart: solar array feeds smart forecasting algorithm which directs energy to old battery, lithium battery, or bypass, then to appliances, with generator backup and ranger notification"
+             style="width:100%;display:block;" />
+        <p style="color:rgba(255,255,255,.45);font-size:.75rem;padding:8px 14px;margin:0;font-style:italic;">
+          Figure 1: Smart hybrid energy management system — the algorithm receives five real-time inputs and controls both where incoming solar energy is stored and where output energy is drawn from. (Source: Authors' own work)
+        </p>
+      </div>
+
+      <!-- Key Considerations -->
       <span class="section-label">Key Considerations</span>
       <div class="kc-grid">
-        <div class="kc-item">[Where are materials sourced from — externally or locally available?]</div>
-        <div class="kc-item">[What are the key maintenance requirements?]</div>
-        <div class="kc-item">[How might implementation be approached?]</div>
-        <div class="kc-item">[What additional consultation or research is still needed?]</div>
-        <div class="kc-item">[What are the next steps to make this happen?]</div>
+        <div class="kc-item">Will require ongoing generator maintenance</div>
+        <div class="kc-item">Will require ongoing battery maintenance</div>
+        <div class="kc-item">Funding via ARENA energy grants</div>
+        <div class="kc-item">Training for local residents and rangers</div>
+        <div class="kc-item">Material sourcing and logistics considerations</div>
+        <div class="kc-item">Implement solar panels first as first stage</div>
+        <div class="kc-item">Meetings with Lama Lama Elders for installation site selection</div>
+        <div class="kc-item">Meetings with parts suppliers for specific pricing</div>
+        <div class="kc-item">Meetings with transport companies for specific pricing</div>
+        <div class="kc-item">Meetings with installation technician</div>
       </div>
 
+      <!-- Cost Summary -->
       <span class="section-label">Proposed Materials &amp; Cost Summary</span>
       <div class="cost-row">
-        <div class="cost-item"><strong>Purchased Materials</strong><span>[List key items]</span></div>
-        <div class="cost-item"><strong>Other Materials</strong><span>[List items]</span></div>
-        <div class="cost-item"><strong>Labour Estimate</strong><span>[Describe requirements]</span></div>
-        <div class="cost-item"><strong>Total (AUD)</strong><span>[Approximate range]</span></div>
-        <div class="cost-item"><strong>Total (Local Currency)</strong><span>[Approximate range]</span></div>
+        <div class="cost-item">
+          <strong>Purchased Materials</strong>
+          <span>500 kW of battery storage · 200 solar panels</span>
+        </div>
+        <div class="cost-item">
+          <strong>Other Materials</strong>
+          <span>Building/construction materials for battery storage housing</span>
+        </div>
+        <div class="cost-item">
+          <strong>Labour</strong>
+          <span>Installation technician · Local community training</span>
+        </div>
+        <div class="cost-item">
+          <strong>Estimated Total (AUD)</strong>
+          <span>[Approximate range — to be confirmed with suppliers]</span>
+        </div>
+        <div class="cost-item">
+          <strong>Estimated Total (Local)</strong>
+          <span>[Approximate range in local currency]</span>
+        </div>
       </div>
 
+      <!-- Navigation buttons -->
       <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:40px;animation:fadeUp .55s .46s ease both;">
         <a href="content.html" style="display:inline-flex;align-items:center;gap:10px;background:var(--leaf);color:#fff;text-decoration:none;font-size:.88rem;font-weight:600;padding:14px 26px;border-radius:var(--r);transition:background .15s;">
           Full Report →
