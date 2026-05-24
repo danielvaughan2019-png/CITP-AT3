@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report - EWB Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── TOP NAV ───────────────────────────────── -->
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">EWB <span>Challenge</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Summary</a></li>
+      <li><a href="content.html" class="active">Report</a></li>
+      <li><a href="refs.html">Refs &amp; Appendix</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── SIDEBAR + CONTENT WRAPPER ────────────── -->
+  <div class="sidebar-layout">
+
+    <!-- ── LEFT SIDEBAR ─────────────────────────── -->
+    <nav id="sidebar" aria-label="Report sections">
+
+      <span class="sidebar-label">Team</span>
+      <a href="#team">      <span class="num">-</span>Group Declaration</a>
+
+      <span class="sidebar-label">Sections</span>
+      <a href="#project">   <span class="num">1</span>Project Details</a>
+      <a href="#background"><span class="num">2</span>Background</a>
+      <a href="#problem">   <span class="num">3</span>Problem &amp; Criteria</a>
+      <a href="#solutions"> <span class="num">4</span>Design Solutions</a>
+      <a href="#selection"> <span class="num">5</span>Design Selection</a>
+      <a href="#design">    <span class="num">6</span>Detailed Design</a>
+      <a href="#prototyping"><span class="num">7</span>Prototyping</a>
+      <a href="#implementation"><span class="num">8</span>Implementation</a>
+      <a href="#cost">      <span class="num">9</span>Cost Analysis</a>
+      <a href="#other">     <span class="num">10</span>Other Considerations</a>
+      <a href="#recommendations"><span class="num">11</span>Recommendations</a>
+
+      <span class="sidebar-label">More</span>
+      <a href="refs.html">  <span class="num">→</span>Refs &amp; Appendices</a>
+    </nav>
+
+    <!-- ── MAIN CONTENT AREA ────────────────────── -->
+    <div id="content-area">
+
+      <!-- ══════════════════════════════════════════
+           TEAM / GROUP DECLARATION
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="team">
+        <div class="content">
+          <div class="reveal">
+            <div class="page-header" style="margin: -64px -48px 40px; padding: 48px 48px 36px;">
+              <div>
+                <span class="page-tag">Team</span>
+                <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;line-height:1.2;margin-bottom:8px;">Group Declaration &amp; Acknowledgement</h1>
+                <p class="subtitle">Contribution records and Acknowledgement of Country.</p>
+              </div>
+            </div>
+
+            <h2 class="section-title">Team Member Contributions</h2>
+            <p>Only team members who contributed directly should be listed below. The team should be in agreement regarding contributions before submitting.</p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width:35%;">Group Member Name</th>
+                    <th>Project Contributions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Nicolas Mouarkesh</td><td>Section 1 - Project Details; Section 7 - Prototyping; Section 8 - Implementation Plan; Section 9 - Cost Analysis; References</td></tr>
+                  <tr><td>Pasquale Panucci</td><td>Section 2 - Background; References</td></tr>
+                  <tr><td>Daniel Vaughan</td><td>Section 4 - Design Solution Options; Section 5 - Design Selection; Section 6 - Detailed Design; References</td></tr>
+                  <tr><td>Hamza Jan Sarhindi</td><td>Section 3 - Problem Description &amp; Design Criteria</td></tr>
+                  <tr><td class="ph-cell">[Full Name]</td><td class="ph-cell">[List sections contributed to, editing, team management, etc.]</td></tr>
+                  <tr><td class="ph-cell">[Full Name]</td><td class="ph-cell">[List sections contributed to, editing, team management, etc.]</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="sub">Acknowledgement of Country</h3>
+            <p>Provide a culturally appropriate and meaningful Acknowledgement of Country. Review the prework from earlier in the semester for guidance.</p>
+            <div class="ack-box">
+              <p>LumenPower acknowledges the Lama Lama people as the Traditional Owners of the lands and waters of Princess Charlotte Bay and the eastern Cape York Peninsula, where this project is situated. We recognise their unbroken spiritual, cultural, and custodial connection to Country - to sea country, coastal landscapes, rivers, and the land that stretches several hundred kilometres around their Aakurru (home). We pay our deepest respects to Lama Lama Elders past, present, and emerging, and to all First Nations peoples whose strength, knowledge, and enduring presence on Country continue to guide and inspire the work of communities, rangers, and partners alike. We acknowledge that Lama Lama people were forcibly removed from their Country and that the right to live on, care for, and make decisions about Country has been hard-won. This project is undertaken in a spirit of genuine partnership, and we commit to designs that centre community priorities, respect cultural values, and support the Lama Lama people's vision for a self-determined future on Country.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 1 — PROJECT DETAILS
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="project">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 1</span>
+            <h2 class="section-title">Project Details</h2>
+
+            <div class="info-block">
+              <dl>
+                <dt>Design Area:</dt>          <dd>3 - Energy</dd>
+                <dt>Project Opportunity:</dt>  <dd>3.2 - Microgrids and hybrid systems for outstations</dd>
+                <dt>How Might We:</dt>         <dd>How might we design a modular, smart solar and storage system that reliably powers the Port Stewart outstation through the extremes of the wet and dry season, reduces dependence on diesel, and can be maintained and expanded by the Lama Lama community over time?</dd>
+                <dt>Tutorial / Zone:</dt>      <dd>Tutorial 1 - Aaron Ngan</dd>
+                <dt>Group Name:</dt>           <dd>LumenPower</dd>
+              </dl>
+            </div>
+
+            <p>This project addresses the energy infrastructure needs of Port Stewart, the remote outstation home of the Lama Lama people on Lama Lama Country, Cape York Peninsula, Queensland. The community currently relies on ageing diesel generation supplemented by limited solar, a configuration that is costly, environmentally harmful, and vulnerable to supply disruption. LumenPower's proposed solution is a hybrid smart energy management system that integrates new solar panels, a dual battery bank, and an intelligent forecasting algorithm to reduce diesel dependence, improve energy reliability, and build a foundation for long-term community energy independence.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Context</h3>
+            <p>Port Stewart is situated near the mouth of the Stewart River on the northern shores of Princess Charlotte Bay, Cape York Peninsula, in Far North Queensland (Centre for Appropriate Technology [CfAT], 2021). It is the traditional home of the Lama Lama people - the Traditional Owners of lands extending several hundred kilometres around Princess Charlotte Bay - who describe themselves as "sand beach people" and "saltwater people," with a profound cultural connection to sea country, coastal landscapes, and marine resources (Yintjingga Aboriginal Corporation [YAC], 2026). The community is among the most geographically isolated in Australia: the nearest regional centre, Coen, is an eight-hour four-wheel-drive journey accessible only during the dry season, and the community is effectively cut off for the approximately five months of the wet season each year (Engineers Without Borders Australia [EWB], 2025). This isolation makes reliable energy infrastructure not merely a convenience but a prerequisite for the community's safety, cultural programs, ranger operations, and year-round presence on Country.</p>
+            <p>Like many remote First Nations outstations across Australia, Port Stewart's energy system is heavily reliant on diesel generation. Nationally, over 100,000 Indigenous Australians live in off-grid remote communities where diesel generators remain the primary power source, often at costs exceeding $5,000 per quarter (Stellae Energy, 2022; Renew Magazine, 2020). In the Cape York context, fuel must be freighted by road or barge, making supply chains fragile and prices significantly higher than urban centres (Cape York Weekly, 2026). Port Stewart's tropical environment - characterised by extreme heat, high humidity, cyclonic conditions, and pest pressure - accelerates equipment degradation and compounds maintenance challenges for communities with limited access to specialist tradespeople (EWB Challenge, 2026).</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Design Area &amp; Project Opportunity</h3>
+            <p>LumenPower selected Design Area 3 - Energy, specifically Project Opportunity 3.2: Microgrids and hybrid systems for outstations. This opportunity calls for the design of modular solar and storage systems that can scale, be repaired, and operate safely in heat, humidity, and pest-prone environments (EWB Challenge, 2026). The group was drawn to this area because energy underpins every other aspect of life at Port Stewart - from refrigeration for food and medicine, to communications, to the operation of the ranger program that is central to Lama Lama cultural and land management practice. Without reliable power, the community's ability to live on and care for Country is constrained in a fundamental way. A well-designed energy system creates a platform on which every other community priority can build.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Needs Statement</h3>
+            <p>How might we design a modular, smart solar and storage system that reliably powers the Port Stewart outstation through the extremes of the wet and dry season, reduces dependence on diesel, and can be maintained and expanded by the Lama Lama community over time? This statement was developed through analysis of the EWB Challenge Design Brief, the community's expressed values around caring for Country and cultural self-determination, and the practical engineering constraints of the Port Stewart environment - including seasonal isolation, tropical climate, and limited access to specialist maintenance (YAC, 2026; EWB Challenge, 2026). It reflects the community's desire for a system that is not only functional but genuinely theirs to own, operate, and adapt.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 2 — BACKGROUND
+      ══════════════════════════════════════════════════ -->
+      <section class="report-section" id="background">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 2</span>
+            <h2 class="section-title">Background</h2>
+            <div class="badge-row">
+              <span class="badge badge-green">Empathy Stage</span>
+              <span class="badge badge-bark">Research &amp; Evidence</span>
+            </div>
+            <p>This section summarises the most relevant background information related to Design Area 3 - Energy, and Project Opportunity 3.2 - Microgrids and hybrid systems for outstations. It draws on the team’s individual background research to present a cohesive picture of the problem, its significance, the current state of energy infrastructure at Port Stewart, and what LumenPower’s design aims to achieve.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Context of the Problem</h3>
+            <p>Lama Lama Country is a culturally rich and ecologically significant area belonging to the Lama Lama people, stretching from Princess Charlotte Bay to the eastern Cape York Peninsula (EWB Challenge, 2026). Due to the Lama Lama people’s values and beliefs, and the land being remote and surrounded by wilderness, essential resources such as electricity are limited within this area (Yintjingga Aboriginal Corporation [YAC], n.d.). As a result of this isolation, the Lama Lama economy cannot readily expand, and outstations cannot be upgraded because the current energy system cannot support the increased power demand that improvements would require. A new design or meaningful upgrade to the existing energy infrastructure is therefore necessary if outstations are to have a reliable power source and the capacity to accommodate future development while remaining true to the community’s values of caring for Country.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Significance to Stakeholders</h3>
+            <p>Due to Port Stewart’s geographic isolation, the community depends on imported third-party resources - most critically, diesel fuel - to power its energy system. This dependency places an unsustainable burden on the community, particularly during the tropical wet season or other extreme weather events such as severe flooding, when access to those resources is cut off and critical day-to-day operations and community resilience are directly threatened (Bushlight, 2011; YAC, n.d.). Environmentally and medically, the absence of a modern, reliable energy source also places restrictions on the community’s needs - limiting refrigeration for food and medicine, communications, and the operation of the ranger program. Looking ahead, the power demand constraints of the current system will become an even greater burden if residents from elsewhere seek to return to Lama Lama Country or if visitor and tourism activity on Country grows.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">What is Already Being Done?</h3>
+            <p>The existing energy system at Port Stewart consists of two hybrid configurations: an 8 kVA diesel generator at Moojeba outstation and another at Theethinji outstation, each supplemented by a small solar array providing a limited renewable input (Bushlight, 2011). While this setup represents an initial step toward hybrid generation, it has significant structural limitations. The system has no adaptability or flexibility - if outstation upgrades were made that increased energy consumption, the current output could not keep pace with the higher power demand. More critically, the heavy reliance on diesel imports represents a lose-lose situation: if fuel supply is disrupted, there is insufficient power to sustain outstation operations; if diesel is burned continuously, it produces emissions that damage the very environment the Lama Lama people are committed to protecting, directly compromising their cultural values (Bushlight, 2011).</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Why This is Not Enough</h3>
+            <p>The central limitation of the existing system is its structural dependence on diesel as a primary fuel source. Diesel must be imported by third-party suppliers into Lama Lama Country at a cost of approximately $5,000 annually, a figure that does not account for the logistical complexity and risk of wet season supply disruption (Bushlight, 2011). Should the generators fail, the community is left without any independent source of power. Beyond cost and supply risk, the ongoing combustion of diesel pollutes the local environment, placing the community’s energy needs in direct tension with their deeply held cultural obligation to care for Country. The existing solar arrays, while a positive step, are too small in capacity and too simple in their control logic to meaningfully reduce diesel dependence or to adapt to changing load conditions. The system, as it stands, cannot support the community’s aspirations for sustainable growth and greater self-determination.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">What Your Project Aims to Achieve</h3>
+            <p>LumenPower’s solution is a hybrid microgrid system centred on new high-efficiency solar panels and a LiFePO₄ lithium battery bank, integrated with the existing infrastructure through a smart energy management algorithm. This approach gives the Lama Lama community a renewable, environmentally responsible source of energy that aligns with their values, while the intelligent control system ensures the existing diesel generator is retained only as an emergency fallback rather than a primary source. Ranger staff would be trained to operate and carry out basic maintenance on the system, building genuine technical capacity within the community and reducing long-term dependence on outside expertise. The result is a design that is not only technically sound but also culturally grounded, scalable, and sustainable over the long term.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 3 — PROBLEM & CRITERIA
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="problem">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 3</span>
+            <h2 class="section-title">Problem Description &amp; Design Criteria</h2>
+
+            <p class="ph"><strong>User Needs Statement:</strong> [Write your one-sentence "How Might We…" statement here - this is the core problem your design addresses.]</p>
+            <p class="ph">Provide a description of the problem to be addressed and the ideal situation you hope to achieve. This should be one concise paragraph expanding on the needs statement above - what does success look like for the community if this problem is solved?</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">3.1 Design Criteria</h3>
+            <p>Define the criteria used to judge potential solutions. Criteria must be specific enough that the client will understand exactly how they are applied. Justify each criterion's importance relative to client and community needs.</p>
+            <p style="font-style:italic;color:var(--clay);font-size:.88rem;">⚠ Tip: Avoid vague criteria like "Sustainable" - be explicit about what you mean. Clarity is vital.</p>
+          </div>
+
+          <div class="reveal">
+            <h4 class="crit">Criterion 1: [Name]</h4>
+            <p class="ph">[1–3 sentence description: What does this criterion mean? How will it be measured or assessed?] [1–2 sentence justification: Why does this matter to the community or client?]</p>
+
+            <h4 class="crit">Criterion 2: [Name]</h4>
+            <p class="ph">[Description.] [Justification.]</p>
+
+            <h4 class="crit">Criterion 3: [Name]</h4>
+            <p class="ph">[Description.] [Justification.]</p>
+
+            <h4 class="crit">Criterion 4: [Name]</h4>
+            <p class="ph">[Description.] [Justification.]</p>
+
+            <h4 class="crit">Criterion 5: [Name] <span style="font-weight:400;font-size:.8rem;color:var(--muted);">(optional)</span></h4>
+            <p class="ph">[Description.] [Justification.]</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 4 — DESIGN SOLUTIONS
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="solutions">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 4</span>
+            <h2 class="section-title">Design Solution Options</h2>
+            <p>Three distinct design options were developed to address the Lama Lama community's energy needs. Each option takes a meaningfully different approach to improving energy reliability, sustainability and affordability in a remote context.</p>
+          </div>
+
+          <div class="design-cards reveal">
+            <!-- Option 1 -->
+            <div class="design-card">
+              <div class="design-card-num">Option 3.1</div>
+              <h4>Pre-fabricated 500 kW Industrial Battery Energy System</h4>
+              <p>Uses a premanufactured shipping container containing all of the battery inverters and generator in a weatherproof configuration combined with new solar panels</p>
+              <p style="font-size:.8rem;margin-top:10px;"><a href="https://powerlinkenergy.com.au/products-powerlink/microgrid-2/che-commercial-series/" target="_blank" style="color:var(--moss);">Powerlink Energy - CHE Commercial Series ↗</a></p>
+            </div>
+            <!-- Option 2 -->
+            <div class="design-card">
+              <div class="design-card-num">Option 3.2</div>
+              <h4>Completely New Fully Electric System</h4>
+              <p>Full arrangement of batteries inverters and solar panels to replace all existing infrastructure.</p>
+              <p style="font-size:.8rem;margin-top:10px;"><a href="https://www.vecteezy.com/png/52214565-blue-solar-panel-in-angled-position-on-transparent-background" target="_blank" style="color:var(--moss);">Solar Panel Reference ↗</a></p>
+            </div>
+            <!-- Option 3 -->
+            <div class="design-card">
+              <div class="design-card-num">Option 3.3 ✓</div>
+              <h4>Hybrid Integration with Smart Energy Balancing System</h4>
+              <p>Integration of smart energy system with new solar panels and batteries to add to existing infrastructure </p>
+              <p style="font-size:.8rem;margin-top:10px;"><a href="https://www.goodwe.com.au/sems-series-smart-energy-management-system" target="_blank" style="color:var(--moss);">GoodWe - SEMS Smart Energy Management System ↗</a></p>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">3.1 - Pre-fabricated 500 kW Industrial Battery Energy System</h3>
+            <p>A pre-manufactured shipping container housing all batteries, inverters, and a generator in a weatherproof configuration, combined with new solar panels. This turnkey solution provides a stable, proven energy system with straightforward replacement of existing infrastructure. It would just require shipment and a short setup</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">3.2 - Completely New Fully Electric System</h3>
+            <p>A full replacement of all existing infrastructure with a new all-electric arrangement of solar panels, batteries, and inverters. This approach would eliminate all diesel usage, offering the highest environmental sustainability of the three options. It would require shipment of all of the components and a lengthier setup of batteries inverters and cabling.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">3.3 - Hybrid Integration with Smart Energy Balancing System</h3>
+            <p>Integration of a smart energy management system with new solar panels and batteries, working alongside the existing infrastructure. Rather than replacing what is already there, this option gives the existing system a new lease of life as a reliable backup, while a smart controller optimises energy use in real time. This has the most complex instillation process due to the extensive cabling and shipment</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 5 — DESIGN SELECTION
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="selection">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 5</span>
+            <h2 class="section-title">Design Selection</h2>
+            <p>Depicted below is a decision matrix outlining a comparison between each of the 3 proposed options. Each of the criteria was given a weighted score from 1-5.</p>
+
+            <h3 class="sub">Decision Matrix</h3>
+
+            <div class="table-wrap">
+              <table class="matrix" style="font-size:.82rem;">
+                <thead>
+                  <tr>
+                    <th style="min-width:160px;">Criterion</th>
+                    <th class="c" style="width:64px;">Weight</th>
+                    <th class="c" style="min-width:110px;">Option 1<br/><small>Pre-fab Battery System</small></th>
+                    <th class="c" style="min-width:110px;">Option 2<br/><small>Fully Electric System</small></th>
+                    <th class="c" style="min-width:130px;">Option 3 ✓<br/><small>Hybrid Smart System</small></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Culturally appropriate -->
+                  <tr>
+                    <td>Culturally Appropriate</td>
+                    <td class="c"><strong>5</strong></td>
+                    <td class="c">4 <span style="color:var(--muted);font-size:.75rem;">(20)</span></td>
+                    <td class="c">4 <span style="color:var(--muted);font-size:.75rem;">(20)</span></td>
+                    <td class="c winner">3 <span style="color:var(--muted);font-size:.75rem;">(15)</span></td>
+                  </tr>
+                  <!-- Low Cost -->
+                  <tr>
+                    <td>Low Cost</td>
+                    <td class="c"><strong>4</strong></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(8)</span></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(8)</span></td>
+                    <td class="c winner">5 <span style="color:var(--muted);font-size:.75rem;">(20)</span></td>
+                  </tr>
+                  <!-- Robust -->
+                  <tr>
+                    <td>Robust</td>
+                    <td class="c"><strong>4</strong></td>
+                    <td class="c">4 <span style="color:var(--muted);font-size:.75rem;">(16)</span></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(8)</span></td>
+                    <td class="c winner">4 <span style="color:var(--muted);font-size:.75rem;">(16)</span></td>
+                  </tr>
+                  <!-- Solve community problems -->
+                  <tr>
+                    <td>Solve Community Problems</td>
+                    <td class="c"><strong>5</strong></td>
+                    <td class="c">4 <span style="color:var(--muted);font-size:.75rem;">(20)</span></td>
+                    <td class="c">3 <span style="color:var(--muted);font-size:.75rem;">(15)</span></td>
+                    <td class="c winner">5 <span style="color:var(--muted);font-size:.75rem;">(25)</span></td>
+                  </tr>
+                  <!-- Eco Friendly -->
+                  <tr>
+                    <td>Eco Friendly</td>
+                    <td class="c"><strong>3</strong></td>
+                    <td class="c">3 <span style="color:var(--muted);font-size:.75rem;">(9)</span></td>
+                    <td class="c">5 <span style="color:var(--muted);font-size:.75rem;">(15)</span></td>
+                    <td class="c winner">2 <span style="color:var(--muted);font-size:.75rem;">(6)</span></td>
+                  </tr>
+                  <!-- Adaptability -->
+                  <tr>
+                    <td>Adaptability</td>
+                    <td class="c"><strong>3</strong></td>
+                    <td class="c">3 <span style="color:var(--muted);font-size:.75rem;">(9)</span></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(6)</span></td>
+                    <td class="c winner">5 <span style="color:var(--muted);font-size:.75rem;">(15)</span></td>
+                  </tr>
+                  <!-- Transportable -->
+                  <tr>
+                    <td>Transportable</td>
+                    <td class="c"><strong>1</strong></td>
+                    <td class="c">5 <span style="color:var(--muted);font-size:.75rem;">(5)</span></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(2)</span></td>
+                    <td class="c winner">2 <span style="color:var(--muted);font-size:.75rem;">(2)</span></td>
+                  </tr>
+                  <!-- Easy spare parts -->
+                  <tr>
+                    <td>Easy to Get Spare Parts</td>
+                    <td class="c"><strong>2</strong></td>
+                    <td class="c">3 <span style="color:var(--muted);font-size:.75rem;">(6)</span></td>
+                    <td class="c">2 <span style="color:var(--muted);font-size:.75rem;">(4)</span></td>
+                    <td class="c winner">3 <span style="color:var(--muted);font-size:.75rem;">(6)</span></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2"><strong>Weighted Total</strong></td>
+                    <td class="c">93 <em style="font-size:.75rem;font-weight:400;">(Rank 2)</em></td>
+                    <td class="c">78 <em style="font-size:.75rem;font-weight:400;">(Rank 3)</em></td>
+                    <td class="c winner"><strong>105 (Rank 1)</strong></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Table 1: Decision matrix comparing three design options. Scores shown as raw rating with weighted score in parentheses. ✓ = selected design. Rating scale: 1 = Poor, 5 = Excellent.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Justification of Selection</h3>
+            <p>The decision matrix prioritised criteria that most directly reflect the needs and values of the Lama Lama community's values. Cultural appropriateness and practicality of the solution both weighted at 5 showing the community need for a reliable unintrusive and practical system. Low cost and robustness were weight at 4, showing the financial and harsh condition constraints. Eco-friendliness and adaptability were weighted at 3. Easy of spare parts at 2 and transportability at 1.</p>
+            <p>Option 1 - the prefabricated industrial battery system – received a respectable and high score due to its reliability transportability and ability to address the community energy demand. This implementation would provide stable and proven energy system with simple integration.</p>
+            <p>However, this solution is restricted by its high upfront cost and lower adaptability. While it was effective it lacked the flexibility of long-term expansion restricting its modularity.</p>
+            <p>Option 2 - the fully electric system - performed well in environment sustainability and cultural appropriateness as a fully electric system would eliminate all diesel usage. </p>
+            <p>Despite these advantages the system does not make sense in practice. since providing a fully electric power system through just solar lacks adaptability robustness of a hybrid system which is vital in such a remote location. This handy capped the options score resulting in the lowest of the 3</p>
+            <p>Option 3 - the hybrid smart integration system - achieved the highest score resulting in its selection as the final solution. Combining low-cost benefits and strong adaptability. This design implements with the existing solar and diesel systems with a new smart balancing system to get the most out of the system. This results in a practical low-cost and highly adaptable modular system. </p>
+            <p>A major strength is its scalability and fixability rather than replacing the existing system it gives it a new use as a backup residual power system. This reduces upfront costs whilst increasing its reliability. The hybrid system also improves energy security by introducing more options for energy. </p>
+            <p>Although this system scored highly it still lacked in cultural appropriateness as it still has a diesel generator although the usage will be drastically reduced it is still not ideal. Despite this it was still considered the most practical and sustainable long-term solution due to its strong balance of between cost and features.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 6 — DETAILED DESIGN
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="design">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 6</span>
+            <h2 class="section-title">Detailed Design</h2>
+            <p>The selected design - a hybrid smart energy management system - integrates new solar and battery infrastructure with the existing solar array and diesel generator, guided by a real-time AI-driven monitoring and balancing system. The design philosophy was shaped by both Lama Lama community Values and EWB design brief prioritising long lifecycle interconnected design and cost (EWB Challenge Design Considerations, 2026).</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">System Components</h3>
+            <p>The final proposed design consists of the following key components:</p>
+            <ul class="blist">
+              <li><strong>Monocrystalline solar panels</strong> - new high-efficiency panels supplementing the existing array</li>
+              <li><strong>LiFePO₄ (lithium iron phosphate) battery array</strong> - new primary battery storage with long cycle life and thermal stability</li>
+              <li><strong>MPPT charge controller</strong> - maximises energy harvested from the solar array</li>
+              <li><strong>Inverter</strong> - converts DC stored energy to AC for appliance use</li>
+              <li><strong>DC bus / combiner</strong> - integrates multiple energy sources onto a common bus</li>
+              <li><strong>Bypass switch</strong> - allows direct solar-to-inverter routing when batteries are full</li>
+              <li><strong>Smart energy monitoring and balancing system</strong> - the core intelligence layer of the design</li>
+            </ul>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Redundancy &amp; Resilience</h3>
+            <p>A key strength of this design is its multiple layers of redundancy. The system is capable of drawing power from three independent sources, in order of preference:</p>
+            <ul class="blist">
+              <li><strong>1. New LiFePO₄ battery array</strong> - primary storage, optimised for efficiency</li>
+              <li><strong>2. Old battery system</strong> - retained as secondary storage and backup</li>
+              <li><strong>3. Diesel generator</strong> - emergency fallback, with significantly reduced usage compared to the original system</li>
+            </ul>
+            <p>This layered approach creates a highly resilient system suited to the remote conditions of Lama Lama Country, where maintenance access is limited and downtime is unacceptable.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Original System - Before Upgrade</h3>
+            <p>Figure 1 below illustrates the existing energy system prior to the proposed upgrade. Energy flows from the solar array and diesel generator through a simple battery-charged decision - if the battery is charged, power goes directly to appliances; if not, the generator is activated. This system lacks any intelligent optimisation, resulting in inefficient energy use and heavy reliance on the diesel generator.</p>
+
+            <div style="background:#000;border-radius:var(--r);padding:16px;margin:20px 0;">
+              <img src="diagram_original_system.png"
+                   alt="Figure 1: Original energy system flowchart showing solar array, old battery, generator, and battery charged decision node"
+                   style="width:100%;border-radius:4px;display:block;" />
+            </div>
+            <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Figure 1: Original energy system - simple solar and diesel configuration without smart management. (Source: Authors' own work)</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Smart Energy Management System - Proposed Design</h3>
+            <p>Figure 2 illustrates the proposed hybrid smart system. The smart energy forecasting and prediction algorithm sits at the heart of the design, receiving real-time inputs and directing energy flows across the entire system.</p>
+
+            <div style="background:#000;border-radius:var(--r);padding:16px;margin:20px 0;">
+              <img src="diagram_smart_system.png"
+                   alt="Figure 2: Smart energy management system flowchart showing solar array, smart algorithm, battery options, bypass, generator, and ranger notification"
+                   style="width:100%;border-radius:4px;display:block;" />
+            </div>
+            <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Figure 2: Proposed smart hybrid energy management system. The algorithm receives five data inputs and controls both where incoming solar energy is stored and where output energy is drawn from. (Source: Authors' own work)</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">How the Smart System Works</h3>
+            <p>This is the key part of the system that sets it apart and makes it the most practical for the Lama Lama energy needs.</p>
+            <p>The smart monitoring systems core component is a set of mirrored computers (onsite and offsite). That provide an output based on the following inputs:</p>
+            <ul class="blist">
+              <li><strong>Battery information</strong> - current state of charge, tempreture, cycle count</li>
+              <li><strong>Current energy generation</strong> - live solar input</li>
+              <li><strong>Number of users</strong> - active load on the system</li>
+              <li><strong>Past energy usage patterns</strong> - historical data of energy usage</li>
+              <li><strong>Weather</strong> - forcast for predicting solar yield</li>
+              <li><strong>Time of day</strong> - anticipating peak and off-peak demand periods</li>
+            </ul>
+
+            <p>Using this data, the algorithm makes two key real-time decisions:</p>
+
+            <h4 class="crit">1. Solar Power Distribution - Where to Put Incoming Energy</h4>
+            <p>The system selects the optimal destination for incoming solar power, choosing from:</p>
+            <ul class="blist">
+              <li>New LiFePO₄ battery array (primary storage)</li>
+              <li>Old battery system (secondary storage)</li>
+              <li>Bypass directly to inverter (when batteries are full)</li>
+            </ul>
+
+            <h4 class="crit">2. Energy Supply Selection - Where to Draw Power From</h4>
+            <p>This system choices which of the folowing is the optimal sources to take energyfrom:</p>
+            <ul class="blist">
+              <li>New LiFePO₄ battery array</li>
+              <li>Old battery array</li>
+              <li>Direct from solar array</li>
+              <li>Diesel generator (emergency backup only)</li>
+            </ul>
+
+            <p>Additionally, the system sends notifications to the community ranger's informing them of predicted energy lulls and surpluses, or when the generator is activated, enabling proactive maintenance and oversight.</p>
+
+            <p>The result is a system that delivers improved efficiency through intelligent prioritisation, greater adaptation to changing conditions, improved longevity of all components through optimised charge cycles, and better utilisation of all available energy resources - both new and existing.</p>
+            <p>To summarise the smart monitoring system. It takes in all relevant information and then directs the system on the best way to use the energy</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Community Concerns &amp; Responses</h3>
+            <ul class="blist">
+              <li><strong>Cultural appropriateness:</strong> The design was guided by the Lama Lama community's value of respect to the land and sea. By prioritising renewable solar energy, the design respects and reflects this ethos. The continued presence of the diesel generator is acknowledged as a limitation, but its usage will be dramatically reduced. (LamaLama About Us, 2026)</li>
+              <li><strong>Maintenance &amp; reliability:</strong> The layered redundancy (new battery → old battery → generator) combined with the smart energy distribution ensures the community is never left completely without power. The mirrored on-site/off-site computer system provides resilience against hardware failure. Ranger notifications enable early intervention before issues escalate</li>
+              <li><strong>Cost:</strong> By integrating with existing infrastructure rather than replacing it, significant capital costs are avoided. The smart system reduces generator runtime, lowering ongoing fuel costs substantially over time. It also features modularity and expansion allowing for minimal upfront cost. </li>
+              <li><strong>Environmental impact:</strong> Diesel generator usage is dramatically reduced through intelligent prioritisation of solar and battery sources. While not fully eliminating diesel, the system offers a substantial step toward cleaner energy for the community.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 7 — PROTOTYPING
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="prototyping">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 7</span>
+            <h2 class="section-title">Prototyping</h2>
+            <p>Given the remote and resource-constrained nature of Port Stewart, LumenPower's prototyping approach was theoretical and algorithmic rather than physical. The core intelligence of the design - the smart energy management algorithm - was the highest-risk and highest-value component to validate, as the entire system's performance depends on its ability to make correct routing decisions across a wide range of real-world energy and weather conditions. Physical hardware components such as the solar panels, inverter, and battery banks are commercially proven products whose individual performance is well established; it was the integration logic and decision-making behaviour of the algorithm that required theoretical prototyping and stress-testing.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">What Was Prototyped &amp; Why</h3>
+            <p>The team prototyped the smart energy management algorithm - specifically its decision logic for routing incoming solar power and selecting the active energy source under varying forecast and battery state-of-charge (SOC) conditions. This was prioritised because algorithm failure in a remote outstation context has immediate consequences: incorrect routing decisions could deplete the battery banks, trigger unnecessary diesel generator runtime, or fail to protect batteries from damaging deep discharge. Validating the decision tree theoretically allowed the team to identify edge cases and refine thresholds before committing them to a hardware specification.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Construction Process</h3>
+            <p>The prototype was developed as a theoretical simulation using a rule-based decision algorithm modelled in a spreadsheet environment. Input parameters were defined for five key variables: solar irradiance (modelled across dry season, wet season, and storm day profiles), lithium battery SOC (0–100%), lead acid battery SOC (0–100%), estimated load demand (kWh/day), and a 48-hour weather forecast category (full sun, partly cloudy, extended overcast, storm/mixed, dry season clear run). For each combination of inputs, the algorithm was stepped through its decision tree and the expected output recorded - where to route solar power, which bank to draw from, whether to activate the diesel generator, and whether to trigger a ranger alert. Approximately 30 distinct input scenarios were tested across three passes, with parameters adjusted between passes to simulate seasonal transitions and edge cases such as simultaneous low SOC in both banks during a multi-day storm event.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Prototype Diagrams</h3>
+            <div class="proto-grid">
+              <div class="proto-slot">[ Figure 3: Algorithm decision flowchart - full sun routing scenario ]<br/><small>Figure 3: Smart algorithm output - full sun scenario. (Source: Authors' own work)</small></div>
+              <div class="proto-slot">[ Figure 4: Algorithm decision flowchart - extended overcast routing scenario ]<br/><small>Figure 4: Smart algorithm output - extended overcast scenario. (Source: Authors' own work)</small></div>
+              <div class="proto-slot">[ Figure 5: Simulated SOC curves - lithium and lead acid banks over 72-hour wet season storm period ]<br/><small>Figure 5: Theoretical SOC simulation across a 72-hour storm period. (Source: Authors' own work)</small></div>
+              <div class="proto-slot">[ Figure 6: Ranger alert threshold diagram - critical SOC trigger and diesel activation logic ]<br/><small>Figure 6: Alert trigger and diesel activation threshold logic. (Source: Authors' own work)</small></div>
+            </div>
+            <p>The diagrams above represent the theoretical prototype outputs for four representative scenarios, illustrating the algorithm's branching logic across different forecast and SOC states and how the system transitions between operating modes. The primary limitation of this theoretical prototype is that it does not account for hardware-level latency, sensor measurement error, or the real-world microclimate variability of Port Stewart - factors that would need to be validated through on-site commissioning once physical hardware is installed.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Testing Method &amp; Results</h3>
+            <p>Testing was conducted through algorithmic simulation across 30 scenarios, each representing a distinct combination of weather forecast category, lithium SOC, lead acid SOC, and daily load demand. Each scenario was evaluated against three criteria: (1) whether the correct energy source was selected given the SOC levels and forecast, (2) whether battery protection thresholds were respected - specifically the lithium 20% cut-off and lead acid 50% depth-of-discharge limit - and (3) whether the ranger alert and diesel activation triggers fired at the correct SOC thresholds. Three representative test cases are summarised below.</p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+      ... (37 KB left)
