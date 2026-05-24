@@ -530,4 +530,480 @@
 
           <div class="reveal">
             <h3 class="sub">Testing Method &amp; Results</h3>
-            <p>Testing was conducted through algorithmic simulation across 30 scenarios, each representing a distinct combination of weather forecast category, lithium SOC, lead acid SOC, and daily load demand. Each scenario was evaluated against three criteria: (1) whether the correct energy source was selected given the SOC levels and forecast, (2) whether battery protection thresholds were respected - specifically the lithium 20% cut-off and lead acid 50% depth-of-discharge limit - and (3) whether the ranger alert and diesel activation tri... (36 KB left)
+            <p>Testing was conducted through algorithmic simulation across 30 scenarios, each representing a distinct combination of weather forecast category, lithium SOC, lead acid SOC, and daily load demand. Each scenario was evaluated against three criteria: (1) whether the correct energy source was selected given the SOC levels and forecast, (2) whether battery protection thresholds were respected - specifically the lithium 20% cut-off and lead acid 50% depth-of-discharge limit - and (3) whether the ranger alert and diesel activation triggers fired at the correct SOC thresholds. Three representative test cases are summarised below.</p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Test #</th>
+                    <th>What Was Tested</th>
+                    <th>Method / Conditions</th>
+                    <th>Result</th>
+                    <th>Pass / Fail</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="c">1</td>
+                    <td>Solar routing decision - full sun, both banks above 80% SOC</td>
+                    <td>Algorithmic simulation; irradiance 6.5 kWh/m²/day (dry season peak); load demand 18 kWh/day; 48-hr forecast: full sun</td>
+                    <td>Algorithm correctly routed solar directly to inverter with trickle charge to lithium bank; lead acid held in standby; no diesel activation; no alert triggered</td>
+                    <td class="c">Pass</td>
+                  </tr>
+                  <tr>
+                    <td class="c">2</td>
+                    <td>Battery protection threshold - extended overcast, lithium SOC at 22%</td>
+                    <td>Algorithmic simulation; irradiance 1.2 kWh/m²/day (storm profile); load demand 20 kWh/day; 72-hr overcast forecast; lithium SOC 22%, lead acid SOC 68%</td>
+                    <td>Algorithm correctly switched draw to lead acid bank; ranger alert triggered at lithium 25% threshold; diesel queued for activation at combined critical SOC; lithium did not drop below 20% cut-off</td>
+                    <td class="c">Pass</td>
+                  </tr>
+                  <tr>
+                    <td class="c">3</td>
+                    <td>Diesel activation and alert sequencing - both banks critically low</td>
+                    <td>Algorithmic simulation; multi-day storm; lithium SOC 21%, lead acid SOC 52%; no solar generation for 18 hrs; load demand 22 kWh/day</td>
+                    <td>Ranger alert triggered correctly before diesel activation; generator started automatically at combined threshold; load continuity maintained; battery protection limits respected throughout</td>
+                    <td class="c">Pass</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Table 2: Theoretical prototype test results summary. All testing conducted via algorithmic simulation. Full scenario dataset in <a href="refs.html#appendices">Appendix 2</a>.</p>
+
+            <p>All three representative test cases passed their evaluation criteria. The algorithm correctly prioritised energy sources, respected battery protection limits, and sequenced alerts and generator activation in the intended order across dry season, storm, and critical depletion scenarios. One key refinement identified through testing was the need to raise the lead acid minimum SOC buffer from 50% to 55% to account for the accelerated self-discharge rate of lead acid cells at Port Stewart's ambient temperatures above 35°C. This adjustment was incorporated into the final algorithm specification and is reflected in the detailed design.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════
+           SECTION 8 — IMPLEMENTATION PLAN
+      ══════════════════════════════════════════════════ -->
+      <section class="report-section" id="implementation">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 8</span>
+            <h2 class="section-title">Implementation Plan</h2>
+            <p>The implementation of the LumenPower hybrid smart energy system is structured across six stages, spanning initial construction through to long-term community ownership. Given Port Stewart’s seasonal inaccessibility - the community is effectively cut off during the wet season, which spans approximately November to March - all on-site work must be scheduled during the dry season window. Community involvement is embedded at every stage, reflecting the Lama Lama people’s right to self-determination and their deep knowledge of Country and its conditions.</p>
+          </div>
+
+          <ul class="timeline">
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 1 - Construction &amp; Community Training</h4>
+                <p>Installation will be carried out by two CEC-accredited electricians based in Cairns, mobilised during the dry season when road access to Port Stewart is available. Community rangers and nominated members of Yintjingga Aboriginal Corporation (YAC) will be involved directly in the installation process - assisting with panel mounting, cable routing, and equipment placement - to build hands-on familiarity with the system from day one. Alongside physical installation, a two-day training program will be delivered covering basic system monitoring via the Victron Cerbo GX interface, how to interpret ranger notification alerts, how to operate the diesel generator manually if automatic start fails, and first-line troubleshooting procedures for common faults such as tripped isolators or low battery warnings.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 2 - Introduction to Client &amp; Community</h4>
+                <p>Prior to installation, LumenPower will present the finalised system design to YAC leadership and community Elders in a co-design review session, ensuring the community has full visibility of what is being installed, why each component is included, and how the system will behave across different seasonal conditions. Plain-language system guides - including a one-page visual summary of the algorithm’s decision logic in dry season, wet season, and storm scenarios - will be produced and left with the community in both printed and digital formats. Once installed and commissioned, a one-week supervised handover period will allow community members to operate the system with the installer team on-site for support before independent operation begins.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 3 - Long-term Use, Management &amp; Maintenance</h4>
+                <p>Day-to-day system monitoring will be managed by trained community rangers, supported by the Victron VRM cloud monitoring platform which enables remote oversight by EWB or YAC technical staff from outside Port Stewart. An annual maintenance visit by a Cairns-based solar technician - scheduled at the start of each dry season - will cover panel cleaning, connection integrity checks, BMS calibration, lead acid equalisation, generator servicing, and software updates to the smart controller. The LiFePO₄ battery bank has an expected cycle life of 6,500 cycles and a projected service life of 15 or more years under the Port Stewart load profile; the lead acid reserve bank should be budgeted for replacement every five to seven years given the tropical heat.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 4 - Evaluation</h4>
+                <p>System performance will be evaluated at six months, twelve months, and annually thereafter against four key indicators: diesel generator runtime hours per month (target: reduction of at least 70% compared to the pre-installation baseline), average daily battery SOC at sunrise (target: above 60% for lithium bank), number of ranger alert notifications triggered per month (target: fewer than two per month outside the peak wet season), and community-reported satisfaction with power reliability. Data will be drawn automatically from the Victron VRM platform and reviewed jointly by YAC and EWB at each evaluation point. Any algorithm threshold adjustments identified through real-world performance data will be implemented remotely via the smart controller’s configuration interface.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 5 - Community Ownership</h4>
+                <p>Full operational ownership transfers to YAC at the conclusion of the supervised handover period at the end of Stage 2. The system is designed to minimise dependency on external expertise: the smart algorithm operates autonomously, the Victron ecosystem provides remote diagnostics accessible to any authorised user with internet access, and all components are standard Australian-market products with distributor networks in Cairns and Townsville. To build technical capacity within the community over time, LumenPower recommends that YAC sponsor one or two community members to complete a Certificate II in Rural Operations or equivalent training that includes solar system maintenance, enabling increasingly self-sufficient upkeep without the need for annual technician visits in future years.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="tl">
+                <h4>Stage 6 - Repair &amp; Contingency</h4>
+                <p>The system’s layered redundancy - lithium bank, lead acid bank, and diesel generator - means that no single component failure results in a complete loss of power. Replacement parts for all components are available through Cairns-based suppliers within standard delivery timeframes, and the modular design allows individual components to be swapped without taking the entire system offline. For wet season failures when road access is unavailable, the diesel generator provides emergency backup on the 200-litre onsite fuel tank, and a stock of critical spare fuses, isolators, and a spare Victron BMV battery monitor will be held on-site. Remote diagnosis via VRM can guide community rangers through first-line repairs under instruction from a technical advisor by phone or satellite communications.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="reveal">
+            <h3 class="sub">Future Impact on the Community</h3>
+            <p>Reliable, affordable energy has transformative potential for the Lama Lama community beyond the immediate reduction in diesel costs. Consistent power enables year-round refrigeration for food and medicine storage, more effective operation of the ranger program - including communications, charging of monitoring equipment, and lighting for ranger bases - and improved conditions for community gatherings, education, and cultural activities on Country. The reduction in diesel freight also decreases the community’s exposure to global fuel price volatility and the logistical risks of remote supply chains, both of which have been identified as critical vulnerabilities for Cape York communities (Cape York Weekly, 2026). One potential unintended consequence is an increase in electricity demand as reliability improves and community members acquire additional appliances; this can be mitigated by sizing the system with future expansion in mind - the modular LiFePO₄ battery architecture and the MPPT controller’s spare capacity allow additional panels and battery modules to be added incrementally as demand grows, without replacing the core system.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 9 — COST ANALYSIS
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="cost">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 9</span>
+            <h2 class="section-title">Cost Analysis</h2>
+            <p>This section details the costs the Lama Lama community would assume to design, implement, and maintain the hybrid smart energy management system - including end-of-life disposal. All prices are presented in Australian Dollars (AUD) and PNG Kina (PGK) for cross-border procurement reference, and are sourced from current Australian supplier and market data (Reserve Bank of Australia, 2026).</p>
+            <p style="font-size:.82rem;color:var(--muted);margin-top:8px;"><strong>Exchange rate:</strong> 1 AUD = 2.47 PGK &nbsp;·&nbsp; As of May 2026 &nbsp;·&nbsp; Source: Reserve Bank of Australia (2026)</p>
+
+            <h3 class="sub">Bill of Materials</h3>
+            <div class="table-wrap">
+              <table class="cost-t">
+                <thead>
+                  <tr>
+                    <th>Item / Component</th>
+                    <th>Specification</th>
+                    <th style="width:45px;">Qty</th>
+                    <th>Unit Cost (AUD)</th>
+                    <th>Total (AUD)</th>
+                    <th>Total (PGK)</th>
+                    <th>Source</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <!-- ── GENERATION ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Generation</td>
+                  </tr>
+                  <tr>
+                    <td>Solar panels (new, supplementary)</td>
+                    <td>Tier-1 monocrystalline, 400 W per panel - 10 kW additional array</td>
+                    <td class="c">25</td>
+                    <td class="c">$320</td>
+                    <td class="c">$8,000</td>
+                    <td class="c">19,760</td>
+                    <td>SolarQuotes (2026)</td>
+                  </tr>
+                  <tr>
+                    <td>Panel mounting - tilt-frame racking</td>
+                    <td>Aluminium tilt-frame, cyclone-rated, north-facing</td>
+                    <td class="c">1 set</td>
+                    <td class="c">-</td>
+                    <td class="c">$2,800</td>
+                    <td class="c">6,916</td>
+                    <td>SPS Energy (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>DC cabling &amp; conduit</td>
+                    <td>6 mm² UV-rated solar cable, fusing, DC isolators, weatherproof conduit</td>
+                    <td class="c">1 set</td>
+                    <td class="c">-</td>
+                    <td class="c">$1,200</td>
+                    <td class="c">2,964</td>
+                    <td>Installer estimate</td>
+                  </tr>
+
+                  <!-- ── CHARGE CONTROL ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Charge Control</td>
+                  </tr>
+                  <tr>
+                    <td>MPPT charge controller</td>
+                    <td>Victron SmartSolar MPPT 150/100-Tr, 48 V, 10 kW, Bluetooth monitoring</td>
+                    <td class="c">1</td>
+                    <td class="c">$1,650</td>
+                    <td class="c">$1,650</td>
+                    <td class="c">4,076</td>
+                    <td>Every Battery Australia (2025)</td>
+                  </tr>
+
+                  <!-- ── DUAL BATTERY SYSTEM ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Dual Battery System</td>
+                  </tr>
+                  <tr>
+                    <td>Lithium (LiFePO₄) battery bank - new, primary</td>
+                    <td>48 V / 200 Ah, 10 kWh - priority bank, 6,500-cycle rated, CEC approved, integrated BMS</td>
+                    <td class="c">1</td>
+                    <td class="c">$5,999</td>
+                    <td class="c">$5,999</td>
+                    <td class="c">14,818</td>
+                    <td>LiFePO4 Australia (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>Existing lead acid battery bank - retained</td>
+                    <td>Existing asset repurposed as secondary reserve bank; no purchase cost</td>
+                    <td class="c">-</td>
+                    <td class="c">$0</td>
+                    <td class="c">$0</td>
+                    <td class="c">0</td>
+                    <td>Existing infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>Lead acid BMS / battery monitor</td>
+                    <td>Victron BMV-712 - SOC tracking, temp compensation, equalisation relay</td>
+                    <td class="c">1</td>
+                    <td class="c">$280</td>
+                    <td class="c">$280</td>
+                    <td class="c">692</td>
+                    <td>Victron Energy Australia (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>DC bus / combiner</td>
+                    <td>Victron Lynx distributor + contactor module, 1000 A - dual-bank switching</td>
+                    <td class="c">1</td>
+                    <td class="c">$650</td>
+                    <td class="c">$650</td>
+                    <td class="c">1,606</td>
+                    <td>Victron Energy Australia (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>Battery cabling &amp; bus bars</td>
+                    <td>35 mm² flexible DC cable, copper bus bars, fusing, inter-bank isolation</td>
+                    <td class="c">1 set</td>
+                    <td class="c">-</td>
+                    <td class="c">$480</td>
+                    <td class="c">1,186</td>
+                    <td>Installer estimate</td>
+                  </tr>
+
+                  <!-- ── INVERSION & SMART CONTROL ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Inversion &amp; Smart Control</td>
+                  </tr>
+                  <tr>
+                    <td>Inverter / charger</td>
+                    <td>Victron MultiPlus-II 48/5000/70 - 5 kVA, 240 V AC, true sine wave, bypass relay</td>
+                    <td class="c">1</td>
+                    <td class="c">$2,450</td>
+                    <td class="c">$2,450</td>
+                    <td class="c">6,052</td>
+                    <td>Aussie Solar Tech (2026)</td>
+                  </tr>
+                  <tr>
+                    <td>Smart system controller / GX device</td>
+                    <td>Victron Cerbo GX - weather API, SOC comms, ranger notification relay, cloud monitoring</td>
+                    <td class="c">1</td>
+                    <td class="c">$380</td>
+                    <td class="c">$380</td>
+                    <td class="c">939</td>
+                    <td>Victron Energy Australia (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>Smart algorithm software integration</td>
+                    <td>Forecast API, battery SOC logic, load prediction, ranger alert trigger configuration</td>
+                    <td class="c">1</td>
+                    <td class="c">-</td>
+                    <td class="c">$1,500</td>
+                    <td class="c">3,705</td>
+                    <td>Developer estimate</td>
+                  </tr>
+                  <tr>
+                    <td>AC distribution board upgrade</td>
+                    <td>Switchboard, RCD, circuit breakers - integrating new and existing AC loads</td>
+                    <td class="c">1</td>
+                    <td class="c">-</td>
+                    <td class="c">$750</td>
+                    <td class="c">1,853</td>
+                    <td>Installer estimate</td>
+                  </tr>
+
+                  <!-- ── COMMUNICATIONS ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Communications &amp; Remote Monitoring</td>
+                  </tr>
+                  <tr>
+                    <td>Satellite / 4G modem</td>
+                    <td>Starlink or Telstra 4G - system data upload, ranger notification push, offsite mirror</td>
+                    <td class="c">1</td>
+                    <td class="c">$700</td>
+                    <td class="c">$700</td>
+                    <td class="c">1,729</td>
+                    <td>Starlink Australia / Telstra (2026)</td>
+                  </tr>
+
+                  <!-- ── EMERGENCY BACKUP ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Emergency Backup - Existing Diesel Generator Retained</td>
+                  </tr>
+                  <tr>
+                    <td>Diesel generator</td>
+                    <td>Existing generator retained as emergency fallback only; no purchase required</td>
+                    <td class="c">-</td>
+                    <td class="c">$0</td>
+                    <td class="c">$0</td>
+                    <td class="c">0</td>
+                    <td>Existing infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>Automatic transfer switch (ATS)</td>
+                    <td>Auto-start relay - wired to smart controller; activates generator on critical SOC</td>
+                    <td class="c">1</td>
+                    <td class="c">$600</td>
+                    <td class="c">$600</td>
+                    <td class="c">1,482</td>
+                    <td>Installer estimate</td>
+                  </tr>
+
+                  <!-- ── LABOUR ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Labour &amp; Installation</td>
+                  </tr>
+                  <tr>
+                    <td>Labour</td>
+                    <td>2 × CEC-accredited electricians, 5 days on-site, Cairns-based - includes travel to Lama Lama Country; approximately 2× metropolitan rate for remote logistics</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$14,000</td>
+                    <td class="c">34,580</td>
+                    <td>Remote QLD installer estimate; Airtasker (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>Freight &amp; transport to site</td>
+                    <td>All components shipped Cairns → Lama Lama Country via road and coastal barge</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$3,500</td>
+                    <td class="c">8,645</td>
+                    <td>Cape York Peninsula logistics estimate</td>
+                  </tr>
+
+                  <!-- ── ANNUAL MAINTENANCE ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">Annual Maintenance</td>
+                  </tr>
+                  <tr>
+                    <td>Annual Maintenance</td>
+                    <td>Panel cleaning, connection check, BMS calibration, generator service, software update - annual remote technician visit</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$2,200 /yr</td>
+                    <td class="c">5,434 /yr</td>
+                    <td>Remote QLD solar maintenance rate estimate; The Off-Grid Shop (2025)</td>
+                  </tr>
+                  <tr>
+                    <td>Diesel fuel - standby use only</td>
+                    <td>Estimated 200 L/yr at remote QLD price ~$2.40/L - sharply reduced vs. original system</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$480 /yr</td>
+                    <td class="c">1,186 /yr</td>
+                    <td>FuelWatch QLD remote pricing (2026)</td>
+                  </tr>
+                  <tr>
+                    <td>Lead acid battery replacement (annualised)</td>
+                    <td>Replacement every 5–7 years in tropical heat; annualised cost shown</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$530 /yr</td>
+                    <td class="c">1,309 /yr</td>
+                    <td>IndexBox Australia (2026)</td>
+                  </tr>
+
+                  <!-- ── END OF LIFE ── -->
+                  <tr style="background:rgba(0,0,0,.04);">
+                    <td colspan="7" style="font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss,#4a7c59);padding:7px 12px;">End-of-Life Disposal (approx. Year 25)</td>
+                  </tr>
+                  <tr>
+                    <td>End-of-life Disposal</td>
+                    <td>Lead acid - B-cycle scheme (free). LiFePO₄ - licensed recycler est. $300–$500. Panels - PV Cycle scheme ~$25/panel. Inverter/electronics - licensed e-waste facility.</td>
+                    <td class="c">-</td>
+                    <td class="c">-</td>
+                    <td class="c">$1,325</td>
+                    <td class="c">3,273</td>
+                    <td>B-cycle Australia (2026); PV Cycle Australia (2026); e-waste facility estimate</td>
+                  </tr>
+
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="4"><strong>Estimated System Total</strong> (hardware + installation, excluding ongoing costs)</td>
+                    <td class="c"><strong>$52,489 AUD</strong></td>
+                    <td class="c"><strong>129,648 PGK</strong></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" style="font-size:.78rem;color:var(--muted);font-weight:400;">Ongoing annual cost (maintenance + fuel + lead acid battery amortisation)</td>
+                    <td class="c" style="font-size:.78rem;color:var(--muted);">~$3,210 /yr</td>
+                    <td class="c" style="font-size:.78rem;color:var(--muted);">~7,929 /yr</td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <p style="font-size:.82rem;color:var(--muted);font-style:italic;">Table 3: Bill of materials and cost estimate. Exchange rate: 1 AUD = 2.47 PGK as of May 2026 (Reserve Bank of Australia, 2026). All AUD prices include GST. Costs are indicative; final figures subject to formal supplier quotation and site assessment. The existing diesel generator and lead acid battery bank are retained from current infrastructure at no purchase cost, consistent with the hybrid integration approach selected in Section 5.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Cost Narrative</h3>
+            <p>The estimated system total of $52,489 AUD sits within the expected range for a comparable off-grid solar upgrade in remote Queensland, where grid connection alone can cost between $30,000 and $100,000 for rural properties (SPS Energy, 2025). The two dominant cost drivers - installation labour ($14,000) and the new LiFePO₄ battery bank ($5,999) - together account for approximately 38% of the upfront budget, which is consistent with industry norms for remote tropical deployments (The Off-Grid Shop, 2025). Critically, the hybrid integration approach avoids the cost of replacing the existing diesel generator and lead acid bank entirely, reducing upfront expenditure significantly relative to Options 3.1 and 3.2. The most significant ongoing cost driver is lead acid battery replacement every five to seven years under Cape York's tropical heat, which accelerates degradation compared to temperate climates and should be budgeted for from the outset (IndexBox Australia, 2026). Opportunities to reduce cost include engaging TAFE-trained local community members for panel cleaning and first-line maintenance, sourcing components through Queensland Government bulk procurement channels available to Indigenous councils, and phasing the smart controller software configuration as Stage 2 once the core hardware is operational.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Funding &amp; Financial Sustainability</h3>
+            <p>Several funding pathways are available to substantially offset project costs. The federal Small-scale Technology Certificates (STC) scheme provides an estimated $3,500–$5,000 upfront rebate on a 10 kW system in Queensland (SolarQuotes, 2026), and the Cheaper Home Batteries Program, introduced in August 2025, provides a further $1,000–$3,000 reduction on compliant battery storage (SolarScorecard, 2026). The 2025–26 Indigenous Councils Funding Program (ICFP) allocates $74.6 million across Queensland's 16 Indigenous councils for local government services, with energy infrastructure listed as an eligible category (Department of Local Government, Water and Volunteers [DLGWV], 2025). Of particular relevance, the National Emergency Management Agency's Queensland Resilience and Risk Reduction Fund (QRRRF) has already funded solar and communications infrastructure at Pormpuraaw Aboriginal Shire Council to the value of $206,000, establishing a direct precedent for this type of project in the Cape York context (National Emergency Management Agency [NEMA], 2024). Combined, these sources could reduce the community's net project cost by 30–50%. The system does not generate direct community income; however, it eliminates the majority of diesel fuel expenditure and substantially reduces electricity costs, projecting a saving of $2,000–$3,000 AUD annually per household (The Off-Grid Shop, 2025), with full cost recovery estimated within 8–12 years and effectively free power for the remaining system life of 15 or more years.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 10 — OTHER CONSIDERATIONS
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="other">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 10</span>
+            <h2 class="section-title">Other Considerations</h2>
+            <p class="ph">Is there anything else that needs to be considered beyond what has been covered in previous sections? Address any remaining social, environmental, ethical, political, or operational dimensions of the design that are relevant for the client to understand before implementation. [Approx. 1–2 paragraphs.]</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Community Reaction - Journey Map</h3>
+            <p>How do you think the community will react to your design over time? The journey map traces the likely community experience from first awareness through to long-term adoption and ownership.</p>
+
+            <div class="journey-slot">
+              [ Journey Map - stages: Awareness → Engagement → Trialling → Adoption → Ownership ]
+              <br/><small style="margin-top:8px;display:block;">Figure X: Community journey map - add your diagram or infographic here. (Source: Authors' own work)</small>
+            </div>
+
+            <p class="ph">Describe each stage of the journey map. What is the community's likely initial reaction? What concerns might arise during engagement? How will the trialling phase be managed? What does successful adoption look like, and how does ownership transfer happen? [Approx. 1 paragraph.]</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 11 — RECOMMENDATIONS
+      ══════════════════════════════════════════════ -->
+      <section class="report-section" id="recommendations">
+        <div class="content">
+          <div class="reveal">
+            <span class="section-tag">Section 11</span>
+            <h2 class="section-title">Recommendations</h2>
+            <p>This section identifies further activity - outside your group's scope - that the client or community will need to undertake to ensure the project is successful.</p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Further Activity Required by the Client</h3>
+            <ul class="blist">
+              <li><strong>[Recommendation 1]:</strong> <span class="ph-cell">[e.g. Conduct detailed community consultation with specific stakeholder group X before proceeding to implementation.]</span></li>
+              <li><strong>[Recommendation 2]:</strong> <span class="ph-cell">[e.g. Engage local government or relevant regulatory body to obtain necessary permits or approvals.]</span></li>
+              <li><strong>[Recommendation 3]:</strong> <span class="ph-cell">[e.g. Establish a community maintenance committee and provide ongoing training resources.]</span></li>
+              <li><strong>[Recommendation 4]:</strong> <span class="ph-cell">[e.g. Run a small-scale pilot programme in one area before full rollout to evaluate and refine the design.]</span></li>
+              <li><strong>[Recommendation 5]:</strong> <span class="ph-cell">[Add additional recommendations as needed.]</span></li>
+            </ul>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub">Further Research Needed</h3>
+            <p class="ph">Identify specific areas where additional research is required to validate your design proposal or improve outcomes. What questions remain unanswered? Who is best placed to conduct this research? [Approx. 1 paragraph.]</p>
+          </div>
+
+          <!-- Bottom page nav -->
+          <div class="page-nav reveal">
+            <a href="index.html">← Executive Summary</a>
+            <a href="refs.html" class="next">References &amp; Appendices →</a>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /#content-area -->
+  </div><!-- /.sidebar-layout -->
+
+  <footer>
+    <p><strong>LumenPower</strong> &nbsp;·&nbsp; EWB Challenge - UTS &nbsp;·&nbsp; LumenPower &nbsp;·&nbsp; 2026</p>
+    <p style="margin-top:6px;opacity:.5;font-size:.74rem;">Academic submission · Written in third person · APA referencing</p>
+  </footer>
+
+  <script src="main.js"></script>
+  
+</body>
+</html>
